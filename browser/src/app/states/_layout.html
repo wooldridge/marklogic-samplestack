@@ -1,10 +1,60 @@
-<div>
+<header class="ss-page-header navbar-fixed-top">
+
+  <div ng-if="loading" class="spinner"></div>
+  <div ng-if="globalError.length" marked="globalError" class="has-error"></div>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+          <img src="app/images/samplestack.svg" border="0">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-if="!store.session" id="navbar-li-logged-out">
+            <button
+              class="btn btn-primary btn-sm"
+              id="nav-log-in"
+              href=""
+              ng-click="openLogin()"
+            >Log In
+            </button>
+          </li>
+          <span ng-if="store.session" ss-account-dropdown></span>
+          <li
+            id="navbar-li-ask-question"
+            ng-class="store.session ? 'active' : 'inactive'"
+          >
+            <a
+              href=""
+              class="ss-ask-button navbar-ask-question"
+              ng-click="store.session ? ask() : ''"
+              ng-class="store.session ? 'active' : 'inactive'"
+            >
+              <span class="glyphicon glyphicon-question-sign"></span>
+              Ask A Question
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<!-- <div>
   <div ng-if="loading" class="spinner">
   </div>
   <div ng-if="globalError.length" marked="globalError" class="has-error"></div>
 
   <header class="ss-page-header">
-    <!-- @todo move form classes (.form-control, .btn, etc.) into sass without losing styling -->
     <div class="ss-app-title">
       <h1>
         <a href="/">samplestack</a>
@@ -31,7 +81,7 @@
         Ask a Question
       </button>
     </div>
-  </header>
+  </header> -->
 
   <div class="ss-incomplete-message">
     <span class="ss-incomplete">(yellow shading indicates incomplete features)</span>

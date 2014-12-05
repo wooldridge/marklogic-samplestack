@@ -63,7 +63,7 @@ button {
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
-  height: 35px;
+  /* height: 35px; */ /* conflicting with bootstrap button styles */
   letter-spacing: normal;
   line-height: 1.5;
   margin-bottom: 0;

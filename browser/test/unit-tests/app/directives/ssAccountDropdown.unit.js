@@ -65,7 +65,7 @@ define([
         );
       });
 
-      it(
+      xit(
         'should display expected info',
         function () {
           var session = ssSession.create({
