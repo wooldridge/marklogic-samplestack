@@ -6179,10 +6179,10 @@ button {
 
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
 .ss-main {
-  max-width: 1200px;
-  min-width: 930px;
+  /* max-width: $view-max-width;
+  min-width: $view-min-width;
   padding-left: 20px;
-  padding-right: 20px; }
+  padding-right: 20px; */ }
 
 /* line 9, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
 .ss-page-header {
@@ -6567,9 +6567,9 @@ ul.ss-tags li {
 
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-bar */
 .ss-search-bar {
-  max-width: 1200px;
-  min-width: 930px;
-  padding-top: 20px; }
+  /* max-width: $view-max-width;
+  min-width: $view-min-width;
+  padding-top: 20px; */ }
   /* line 6, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-bar */
   .ss-search-bar form {
     border-collapse: collapse;
@@ -6890,37 +6890,38 @@ ul.ss-tags li {
 /* line 41, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .ss-incomplete-message {
   max-width: 1200px;
-  text-align: center; }
+  text-align: center;
+  position: absolute; }
 
-/* line 46, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 47, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .has-error {
   border: 1px solid #f00;
   padding: 5px; }
 
-/* line 51, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 52, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 p.has-error {
   color: #f00;
   font-weight: bold; }
 
-/* line 56, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 57, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .ml-edit-tools {
   background-color: #ddd;
   margin-top: 10px;
   padding: 5px;
   width: 400px; }
 
-/* line 63, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 64, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .ss-divider {
   background-color: #000;
   height: 1px;
   margin: 5px 0;
   width: 205px; }
 
-/* line 70, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 71, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .ss-typeahead-item {
   cursor: pointer; }
 
-/* line 74, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
+/* line 75, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .ss-column {
   float: left;
   position: relative; }
