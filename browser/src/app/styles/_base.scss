@@ -2,7 +2,7 @@
 @import 'bootstrap';
 @import 'variables';
 
-html {
+/* html {
   height: 100.1%;
   overflow-y: scroll;
 }
@@ -62,9 +62,9 @@ button {
   border-radius: 3px;
   display: inline-block;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: bold; */
   /* height: 35px; */ /* conflicting with bootstrap button styles */
-  letter-spacing: normal;
+  /* letter-spacing: normal;
   line-height: 1.5;
   margin-bottom: 0;
   overflow: visible;
@@ -79,4 +79,4 @@ button {
 form input,
 form textarea {
   @extend .form-control;
-}
+} */
