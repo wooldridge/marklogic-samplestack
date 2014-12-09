@@ -1,17 +1,11 @@
-<!-- <form>
-  <input type="text" ng-model="searchbarText"/>
-  <div class="ss-search-bar-tools">
-    <button ng-click="setQueryText()">Search</button>
-    <div class="ss-search-tips" ng-click="showTips=!showTips">Search Tips
-      <span class="ss-search-tips-icon" ng-show="!showTips">&#9660;</span>
-      <span class="ss-search-tips-icon" ng-show="showTips">&#9650;</span>
-    </div>
-  </div>
-</form> -->
-
 <div id="search-module-wrapper" class="container-fluid">
   <div id="search-tips-wrapper">
-    <button id="search-tips" type="button" class="btn btn-primary btn-lg"><i id="tips-icon" class="icon-pointer-down"></i><span class="visible-md-inline visible-lg-inline">Search Tips</span></button>
+    <button
+      id="search-tips"
+      type="button"
+      class="btn btn-primary btn-lg"
+      ng-click="showTips=!showTips"
+    ><i id="tips-icon" class="icon-pointer-down"></i><span class="visible-md-inline visible-lg-inline">Search Tips</span></button>
   </div>
   <div class="search-module-inner clearfix">
     <div class="search-input-wrapper">
@@ -34,7 +28,95 @@
   </div>
 </div>
 
-<div class="ss-search-tips-panel" ng-show="showTips">
+<div id="tips-box" class="container-fluid" ng-show="showTips">
+  <div class="row">
+    <div class="col col-sm-4">
+      <div class="row">
+        <label class="col-xs-6 text-right">Tags:</label>
+        <div class="col-xs-6 sample">
+          <p>[tag]</p>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-xs-6 text-right">Exact:</label>
+        <div class="col-xs-6 sample">
+          <p>“words here”</p>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-xs-6 text-right">Author:</label>
+        <div class="col-xs-6 sample">
+          <p>user:1234</p>
+          <p>user:me (yours)</p>
+        </div>
+      </div>
+      <div class="row">
+        <label class="col-xs-6 text-right">Score:</label>
+        <div class="col-xs-6 sample">
+          <p>score:3 (3+)</p>
+          <p>score:0 (none)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-sm-4">
+      <div class="row">
+        <div class="row">
+          <label class="col-xs-6 text-right">Answers:</label>
+          <div class="col-xs-6 sample">
+            <p>[answers:3 (3+)</p>
+            <p>hasaccepted:no</p>
+            <p>inquestion:1234</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-xs-6 text-right">Views:</label>
+          <div class="col-xs-6 sample">
+            <p>views:250</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-xs-6 text-right">Author: </label>
+          <div class="col-xs-6 sample">
+            <p>user:me (yours)</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-xs-6 text-right">Sections:</label>
+          <div class="col-xs-6 sample">
+            <p>body:&quot;apples oranges&quot;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col col-sm-4">
+      <div class="row">
+        <div class="row">
+          <label class="col-xs-6 text-right">URL:</label>
+          <div class="col-xs-6 sample">
+            <p>url:&quot;*.example.com&quot;</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-xs-6 text-right">Status:</label>
+          <div class="col-xs-6 sample">
+            <p>closed:yes</p>
+            <p>duplicate:no</p>
+            <p>wiki:no</p>
+            <p>is:question</p>
+          </div>
+        </div>
+        <div class="row">
+          <label class="col-xs-6 text-right">Types:</label>
+          <div class="col-xs-6 sample">
+            <p>is:answer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="ss-search-tips-panel" ng-show="showTips">
   <dl>
     <dt>tags</dt>
       <dd>tag:tag1<br />tag:tag1 OR tag:tag2</dd>
@@ -55,4 +137,4 @@
     <dt>operators</dt>
       <dd>query1 AND query2&nbsp;&nbsp;&nbsp;[implicit for adjacent terms]<br />query1 OR query2<br />-query&nbsp;&nbsp;&nbsp;[negation]<br />(query1 OR query2) AND query3&nbsp;&nbsp;&nbsp;[grouping]</dd>
   </dl>
-</div>
+</div> -->

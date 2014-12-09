@@ -118,7 +118,7 @@
 
 /* TOP BAR ========================================== */
 
-	.navbar-fixed-top {
+	/* .navbar-fixed-top {
 		z-index:300;
 	}
 
@@ -161,12 +161,12 @@
 	nav ul.nav span.glyphicon {
 		padding:3px;
 		margin-right: 2px;
-	}
+	} */
 
 
 
 	/* LOGGED OUT */
-	nav ul.nav li#navbar-li-logged-out {
+	/* nav ul.nav li#navbar-li-logged-out {
 		display: block;
 		padding-top:4px;
 	}
@@ -184,11 +184,11 @@
 	nav ul.nav li#navbar-li-logged-out a.btn:hover {
 		background-color: #3071a9;
 		border-color: #285e8e;
-  }
+  } */
 
 
 	/* USER INFO */
-	nav ul.nav li#navbar-li-logged-in a {
+	/* nav ul.nav li#navbar-li-logged-in a {
 		color:#fff;
 		display: block!important;
 		font-size: 14px;
@@ -252,11 +252,11 @@
 		border-color: #ccc;
 		display: inline-block!important;
 		font-size: 13px;
-		padding: 3px 10px;
+		padding: 3px 10px; */
 		/*float: right; */
-	}
+	/* } */
 
-	nav ul.nav li#navbar-li-logged-in a.btn-default:hover {
+	/* nav ul.nav li#navbar-li-logged-in a.btn-default:hover {
 		color: #333;
 		background-color: #333;
 		border-color: #adadad;
@@ -273,11 +273,11 @@
 	nav ul.nav li#navbar-li-logged-in a.btn-primary:hover {
 		background-color: #428bca;
 		border-color: #357ebd;
-	}
+	} */
 
 
 	/* ASK QUESTION BUTTON */
-	nav ul.nav li#navbar-li-ask-question a.active {
+	/* nav ul.nav li#navbar-li-ask-question a.active {
 		color:#fff;
 		background: none;
 	}
@@ -336,7 +336,7 @@
 			border-color: #595959;
 		}
 
-	}
+	} */
 
 
 /* SEARCH MODULE ========================================== */
