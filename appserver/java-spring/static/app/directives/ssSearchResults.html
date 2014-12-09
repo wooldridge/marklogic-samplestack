@@ -38,33 +38,16 @@
         </div> <!-- col-md-12 -->
       </div> <!-- row tab-wrapper -->
 
-      <div class="row clearfix question-row ">
-        <div class="col-md-1 col-sm-2 col-xs-3 question-voting-stats">
-          <div class="voting-stats-module">
-            <div class="voting-stats-header">Votes</div>
-            <div class="voting-stats">4,831</div>
-            <div class="voting-answers answered ">200</div>
-            <div class="voting-answers-footer">Answers</div>
-          </div> <!-- voting-stats-module -->
-        </div> <!-- col-md-1 col-sm-2 col-xs-3 question-voting-stats -->
-        <div class="col-md-11 col-sm-10 col-xs-9 question-wrapper">
-          <div class="question-inner">
-            <h4><a href="qa-logged-out.php">What does the yield keyword do in Python?</a></h4>
-          </div> <!-- question-inner -->
-          <div class="question-info-wrapper clearfix">
-            <div class="question-info">
-              <span class="started">Asked Oct 23 '08 at 22:21&nbsp;<a href="http://www.stackoverflow.com" target="_blank" >Alex. S.&nbsp;&nbsp;<span class="glyphicon glyphicon-new-window" ></span></a>
-              &nbsp;&nbsp;[2647]</span>
-            </div>
-            <div class="question-tags">
-              <span class="label label-default">python</span>
-              <span class="label label-default">iterator</span>
-              <span class="label label-default">generator</span>
-              <span class="label label-default">yield</span>
-            </div>
-          </div> <!-- question-info-wrapper clearfix -->
-        </div> <!-- col-md-11 col-sm-10 col-xs-9 question-wrapper -->
-      </div> <!-- row clearfix question-row -->
+      <section
+        class="ss-result row clearfix question-row"
+        ng-repeat="item in search.results.items"
+      >
+        <ss-search-result></ss-search-result>
+      </section>
+
+      <!-- <div class="row clearfix question-row ">
+
+      </div> --> <!-- row clearfix question-row -->
 
       <div class="row paging">
         <div class="col-md-11 col-sm-10 col-xs-9">

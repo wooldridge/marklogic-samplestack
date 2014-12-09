@@ -1,3 +1,61 @@
+<div class="col-md-1 col-sm-2 col-xs-3 question-voting-stats">
+  <div class="voting-stats-module">
+    <div class="voting-stats-header">Votes</div>
+    <div class="voting-stats">
+      <span
+        ng-bind-template="{{::item.content.voteCount ? item.content.voteCount : '0' }}"
+      ></span>
+    </div>
+    <div class="voting-answers answered ">
+      <span
+        ng-bind-template="{{::item.content.answerCount}}"
+      >
+      </span>
+    </div>
+    <div class="voting-answers-footer">Answers</div>
+  </div> <!-- voting-stats-module -->
+</div> <!-- col-md-1 col-sm-2 col-xs-3 question-voting-stats -->
+<div class="col-md-11 col-sm-10 col-xs-9 question-wrapper">
+  <div class="question-inner">
+    <h4>
+      <a
+        ui-sref="root.layout.qnaDoc({ id: item.content.id, q: search.criteria.q })"
+        ng-bind-template="Q: {{::item.content.title}}"
+      >
+      </a>
+    </h4>
+    <p>
+      <span ng-if="searchMode()" ng-repeat="snippet in item.content.snippets">
+        <span ng-if="displaySnippet(snippet.source)">
+        <a
+          ui-sref=
+            "root.layout.qnaDoc({ id: item.content.id, 'content-id': snippet.id, q: search.criteria.q })"
+          class="question"
+        >{{getPrefix(snippet.source)}}</a>
+        <span ng-repeat="match in snippet['match-text'] track by $index"
+        ><strong ng-if="match.highlight"
+        >{{match.highlight}}</strong><span ng-if="!match.highlight"
+          >{{match}}</span
+        ></span>{{$last ? '' : ' ... '}}
+        </span>
+      </span>
+    </p>
+  </div> <!-- question-inner -->
+  <div class="question-info-wrapper clearfix">
+    <div class="question-info">
+      <span class="started">Asked Oct 23 '08 at 22:21&nbsp;<a href="http://www.stackoverflow.com" target="_blank" >Alex. S.&nbsp;&nbsp;<span class="glyphicon glyphicon-new-window" ></span></a>
+      &nbsp;&nbsp;[2647]</span>
+    </div>
+    <div class="question-tags">
+      <span class="label label-default">python</span>
+      <span class="label label-default">iterator</span>
+      <span class="label label-default">generator</span>
+      <span class="label label-default">yield</span>
+    </div>
+  </div> <!-- question-info-wrapper clearfix -->
+</div> <!-- col-md-11 col-sm-10 col-xs-9 question-wrapper -->
+
+<!--
 <div class="ss-votes">
   <div class="ss-score">
     <label>votes</label>
@@ -25,7 +83,6 @@
 <p>
   <span ng-if="searchMode()" ng-repeat="snippet in item.content.snippets">
     <span ng-if="displaySnippet(snippet.source)">
-    <!-- TODO link to page anchor for question or answer -->
     <a
       ui-sref=
         "root.layout.qnaDoc({ id: item.content.id, 'content-id': snippet.id, q: search.criteria.q })"
@@ -39,4 +96,4 @@
     </span>
   </span>
 </p>
-<ss-qna-doc-metadata doc="item.content" doc-type="question"></ss-qna-doc-metadata>
+<ss-qna-doc-metadata doc="item.content" doc-type="question"></ss-qna-doc-metadata> -->
