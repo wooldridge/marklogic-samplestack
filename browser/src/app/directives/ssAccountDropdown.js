@@ -33,7 +33,7 @@ define([
   module.directive('ssAccountDropdown', function () {
     return {
       restrict: 'A',
-      replace: true,
+      //replace: true,
       templateUrl: '/app/directives/ssAccountDropdown.html',
       link: function (scope, element, attrs) {
 

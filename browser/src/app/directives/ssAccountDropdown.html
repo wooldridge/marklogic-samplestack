@@ -1,27 +1,25 @@
-<li id="navbar-li-logged-in" class="dropdown">
-  <a href="" id="navbar-logged-in" class="dropdown-toggle" data-toggle="dropdown">
-    <span class="glyphicon glyphicon-user"></span>
-    {{store.session.userInfo.displayName}}
-    [{{store.session.userInfo.reputation}}]
-    <span class="caret"></span>
-  </a>
-  <div class="user-dropdown-menu dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <div class="user-info">
-        <h4 class="list-group-item-heading"
-        >{{store.session.userInfo.displayName}}</h4>
-        <p class="list-group-item-text"
-        ><strong>Votes cast:</strong>
-        {{store.session.userInfo.votes.length}}</p>
-        <p class="list-group-item-text"
-        ><strong>Reputation:</strong>
-        {{store.session.userInfo.reputation}}</p>
-    </div>
-    <div class="user-actions">
-      <a
-        class="btn btn-primary btn-xs"
-        href=""
-        ng-click="logout()"
-      >Log Out</a>
-    </div>
+<a href="" class="dropdown-toggle" data-toggle="dropdown">
+  <span class="glyphicon glyphicon-user"></span>
+  {{store.session.userInfo.displayName}}
+  [{{store.session.userInfo.reputation}}]
+  <span class="caret"></span>
+</a>
+<div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+  <div class="ss-account-info">
+      <h4 class="list-group-item-heading"
+      >{{store.session.userInfo.displayName}}</h4>
+      <p class="list-group-item-text"
+      ><strong>Votes cast:</strong>
+      {{store.session.userInfo.votes.length}}</p>
+      <p class="list-group-item-text"
+      ><strong>Reputation:</strong>
+      {{store.session.userInfo.reputation}}</p>
   </div>
-</li>
+  <div class="ss-account-actions">
+    <a
+      class="btn btn-primary btn-xs"
+      href=""
+      ng-click="logout()"
+    >Log Out</a>
+  </div>
+</div>

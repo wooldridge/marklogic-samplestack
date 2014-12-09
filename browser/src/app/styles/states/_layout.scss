@@ -1,7 +1,3 @@
-.ss-main {
-
-}
-
 .ss-page-header {
 
   .navbar-fixed-top {
@@ -19,12 +15,13 @@
     margin-bottom: 0!important;
   }
 
-  nav .navbar-brand {
+  /** samplestack logo **/
+  .ss-app-title {
     color:#fff!important;
     padding:11px 13px;
   }
 
-  nav .navbar-brand img {
+  .ss-app-title img {
     width:185px;
   }
 
@@ -49,36 +46,36 @@
     margin-right: 2px;
   }
 
-  /* LOGGED OUT */
-  nav ul.nav li#navbar-li-logged-out {
+  /** login button **/
+  .ss-login {
     display: block;
     padding-top:4px;
   }
 
-  nav ul.nav li#navbar-li-logged-out button.btn {
+  .ss-login button.btn {
     padding:3px 20px
   }
 
-  nav ul.nav li#navbar-li-logged-out a.btn {
+  .ss-login a.btn {
     color:#fff!important;
     display: block;
     padding:3px 20px;
   }
 
-  nav ul.nav li#navbar-li-logged-out a.btn:hover {
+  .ss-login a.btn:hover {
     background-color: #3071a9;
     border-color: #285e8e;
   }
 
 
-  /* USER INFO */
-  nav ul.nav li#navbar-li-logged-in a {
+  /** account dropdown **/
+  nav ul.nav li.ss-account-dropdown a {
     color:#fff;
     display: block!important;
     font-size: 14px;
   }
 
-  nav ul.nav li#navbar-li-logged-in a span.glyphicon {
+  nav ul.nav li.ss-account-dropdown a span.glyphicon {
     border:1px solid #9b9b9b;
     padding:1px;
     -webkit-border-radius: 3px;
@@ -89,40 +86,41 @@
 
   }
 
-  nav ul.nav li#navbar-li-logged-in a span.caret {
+  nav ul.nav li.ss-account-dropdown a span.caret {
     color:#ccc;
   }
 
-  nav ul.nav li#navbar-li-logged-in:hover,
-  nav ul.nav li#navbar-li-logged-in.open {
+  nav ul.nav li.ss-account-dropdown:hover,
+  nav ul.nav li.ss-account-dropdown.open {
     background: #333;
   }
 
-  nav ul.nav li#navbar-li-logged-in.open a,
-  nav ul.nav li#navbar-li-logged-in a:hover {
+  nav ul.nav li.ss-account-dropdown.open a,
+  nav ul.nav li.ss-account-dropdown a:hover {
     background: #333;
+    color: #fff;
   }
 
-  .user-dropdown-menu {
+  .ss-account-dropdown .dropdown-menu {
     width:250px;
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  .user-dropdown-menu .user-info {
+  .ss-account-info {
     padding:14px 18px 14px 18px;
   }
 
-  .user-dropdown-menu .user-info h4 {
+  .ss-account-info h4 {
     padding-bottom: 2px;
     color:#000;
   }
 
-  .user-dropdown-menu .user-info p {
+  .ss-account-info p {
     font-size:12px;
   }
 
-  .user-actions {
+  .ss-account-actions {
     border-top:1px solid #ddd;
     padding: 6px 16px 10px;
     padding-bottom: 6px;
@@ -130,7 +128,7 @@
     margin-bottom: 0!important;
   }
 
-  nav ul.nav li#navbar-li-logged-in a.btn-default {
+  nav ul.nav li.ss-account-dropdown a.btn-default {
     color: #333;
     background-color: #fff;
     border-color: #ccc;
@@ -140,13 +138,13 @@
     float: right;
   }
 
-  nav ul.nav li#navbar-li-logged-in a.btn-default:hover {
+  nav ul.nav li.ss-account-dropdown a.btn-default:hover {
     color: #333;
     background-color: #333;
     border-color: #adadad;
   }
 
-  nav ul.nav li#navbar-li-logged-in a.btn-primary {
+  nav ul.nav li.ss-account-dropdown a.btn-primary {
     background-color: #428bca;
     border-color: #357ebd;
     display: inline-block!important;
@@ -154,30 +152,34 @@
     padding: 3px 10px;
   }
 
-  nav ul.nav li#navbar-li-logged-in a.btn-primary:hover {
+  nav ul.nav li.ss-account-dropdown a.btn-primary:hover {
     background-color: #428bca;
     border-color: #357ebd;
   }
 
 
-  /* ASK QUESTION BUTTON */
-  nav ul.nav li#navbar-li-ask-question a.active {
+  /** ask question button **/
+  nav ul.nav li.ss-ask-button a.active {
     color:#fff;
     background: none;
   }
 
-  nav ul.nav li#navbar-li-ask-question a.active:hover {
+  .ss-ask-button a.active:hover {
     color:#fff;
     background: #333!important;
   }
 
-  nav ul.nav li#navbar-li-ask-question span.glyphicon {
+  .ss-ask-button span.glyphicon {
     color:#3abc9a;
     font-size: 16px;
     margin-top: -2px;
   }
 
-  nav ul.nav li#navbar-li-ask-question a.active:hover {
+  .ss-ask-button a.inactive span.glyphicon {
+    color:#5D5D5D;
+  }
+
+  .ss-ask-button a.active:hover {
     color:#fff;
     background-color: #e6e6e6;
     border-color: #adadad;
@@ -224,12 +226,12 @@
 
 }
 
-footer {
+.ss-page-footer {
   border-top:1px solid #ddd;
   padding:10px 10px 10px 10px;
 }
 
-footer p {
+.ss-page-footer p {
   font-size: 10px;
   color: #666;
 }

@@ -3320,7 +3320,7 @@ tbody.collapse.in {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
   /* line 52, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/dropdowns */
-  .dropdown-menu.pull-right, .ss-account-dropdown ul.dropdown-menu, .ss-account-dropdown button.dropdown-menu {
+  .dropdown-menu.pull-right {
     right: 0;
     left: auto; }
   /* line 58, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/dropdowns */
@@ -3400,7 +3400,7 @@ tbody.collapse.in {
   z-index: 990; }
 
 /* line 172, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/dropdowns */
-.pull-right > .dropdown-menu, .ss-account-dropdown ul > .dropdown-menu, .ss-account-dropdown button > .dropdown-menu {
+.pull-right > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -4801,7 +4801,7 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
 .media > .pull-left {
   margin-right: 10px; }
 /* line 43, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/media */
-.media > .pull-right, .ss-account-dropdown .media > ul, .ss-account-dropdown .media > button {
+.media > .pull-right {
   margin-left: 10px; }
 
 /* line 53, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/media */
@@ -5870,7 +5870,7 @@ button.close, .ss-dialog header button {
   margin-right: auto; }
 
 /* line 15, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities */
-.pull-right, .ss-account-dropdown ul, .ss-account-dropdown button {
+.pull-right {
   float: right !important; }
 
 /* line 18, bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities */
@@ -6281,15 +6281,16 @@ h1 {
   font-size: 12px;
   color: #428bca; }
 
-/* line 5, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+/* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
 .ss-page-header {
-  /* LOGGED OUT */
-  /* USER INFO */
-  /* ASK QUESTION BUTTON */ }
-  /* line 7, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /** samplestack logo **/
+  /** login button **/
+  /** account dropdown **/
+  /** ask question button **/ }
+  /* line 3, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header .navbar-fixed-top {
     z-index: 300; }
-  /* line 11, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /* line 7, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header nav {
     background: #292929 !important;
     -webkit-border-radius: 0px !important;
@@ -6299,53 +6300,53 @@ h1 {
     padding-left: 0 !important;
     padding-right: 0 !important;
     margin-bottom: 0 !important; }
-  /* line 22, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav .navbar-brand {
+  /* line 19, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-app-title {
     color: #fff !important;
     padding: 11px 13px; }
-  /* line 27, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav .navbar-brand img {
+  /* line 24, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-app-title img {
     width: 185px; }
-  /* line 31, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /* line 28, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header nav ul.nav li button.btn {
     margin-top: 9px;
     margin-left: 14px;
     margin-right: 14px; }
-  /* line 37, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /* line 34, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header nav ul.nav li a.inactive {
     color: #5d5d5d;
     background: #2d2d2d; }
-  /* line 42, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /* line 39, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header nav ul.nav li a.inactive:hover {
     color: #5d5d5d;
     background: #2d2d2d; }
-  /* line 47, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  /* line 44, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
   .ss-page-header nav ul.nav span.glyphicon {
     padding: 3px;
     margin-right: 2px; }
-  /* line 53, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-out {
+  /* line 50, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-login {
     display: block;
     padding-top: 4px; }
-  /* line 58, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-out button.btn {
+  /* line 55, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-login button.btn {
     padding: 3px 20px; }
-  /* line 62, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-out a.btn {
+  /* line 59, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-login a.btn {
     color: #fff !important;
     display: block;
     padding: 3px 20px; }
-  /* line 68, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-out a.btn:hover {
+  /* line 65, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-login a.btn:hover {
     background-color: #3071a9;
     border-color: #285e8e; }
-  /* line 75, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a {
+  /* line 72, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a {
     color: #fff;
     display: block !important;
     font-size: 14px; }
-  /* line 81, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a span.glyphicon {
+  /* line 78, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a span.glyphicon {
     border: 1px solid #9b9b9b;
     padding: 1px;
     -webkit-border-radius: 3px;
@@ -6353,39 +6354,40 @@ h1 {
     border-radius: 3px;
     color: #9b9b9b;
     margin-right: 8px; }
-  /* line 92, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a span.caret {
+  /* line 89, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a span.caret {
     color: #ccc; }
-  /* line 97, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in:hover, .ss-page-header nav ul.nav li#navbar-li-logged-in.open {
+  /* line 94, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown:hover, .ss-page-header nav ul.nav li.ss-account-dropdown.open {
     background: #333; }
-  /* line 102, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in.open a, .ss-page-header nav ul.nav li#navbar-li-logged-in a:hover {
-    background: #333; }
-  /* line 106, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header .user-dropdown-menu {
+  /* line 99, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown.open a, .ss-page-header nav ul.nav li.ss-account-dropdown a:hover {
+    background: #333;
+    color: #fff; }
+  /* line 104, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-account-dropdown .dropdown-menu {
     width: 250px;
     padding-top: 0;
     padding-bottom: 0; }
-  /* line 112, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header .user-dropdown-menu .user-info {
+  /* line 110, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-account-info {
     padding: 14px 18px 14px 18px; }
-  /* line 116, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header .user-dropdown-menu .user-info h4 {
+  /* line 114, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-account-info h4 {
     padding-bottom: 2px;
     color: #000; }
-  /* line 121, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header .user-dropdown-menu .user-info p {
+  /* line 119, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-account-info p {
     font-size: 12px; }
-  /* line 125, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header .user-actions {
+  /* line 123, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-account-actions {
     border-top: 1px solid #ddd;
     padding: 6px 16px 10px;
     padding-bottom: 6px;
     text-align: right;
     margin-bottom: 0 !important; }
-  /* line 133, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a.btn-default {
+  /* line 131, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a.btn-default {
     color: #333;
     background-color: #fff;
     border-color: #ccc;
@@ -6393,82 +6395,85 @@ h1 {
     font-size: 13px;
     padding: 3px 10px;
     float: right; }
-  /* line 143, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a.btn-default:hover {
+  /* line 141, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a.btn-default:hover {
     color: #333;
     background-color: #333;
     border-color: #adadad; }
-  /* line 149, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a.btn-primary {
+  /* line 147, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a.btn-primary {
     background-color: #428bca;
     border-color: #357ebd;
     display: inline-block !important;
     font-size: 13px;
     padding: 3px 10px; }
-  /* line 157, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-logged-in a.btn-primary:hover {
+  /* line 155, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-account-dropdown a.btn-primary:hover {
     background-color: #428bca;
     border-color: #357ebd; }
-  /* line 164, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-ask-question a.active {
+  /* line 162, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header nav ul.nav li.ss-ask-button a.active {
     color: #fff;
     background: none; }
-  /* line 169, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-ask-question a.active:hover {
+  /* line 167, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-ask-button a.active:hover {
     color: #fff;
     background: #333 !important; }
-  /* line 174, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-ask-question span.glyphicon {
+  /* line 172, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-ask-button span.glyphicon {
     color: #3abc9a;
     font-size: 16px;
     margin-top: -2px; }
-  /* line 180, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-  .ss-page-header nav ul.nav li#navbar-li-ask-question a.active:hover {
+  /* line 178, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-ask-button a.inactive span.glyphicon {
+    color: #5D5D5D; }
+  /* line 182, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+  .ss-page-header .ss-ask-button a.active:hover {
     color: #fff;
     background-color: #e6e6e6;
     border-color: #adadad; }
   @media (max-width: 768px) {
-    /* line 188, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 190, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header nav ul.nav li#nav-li-log-in {
       background: none !important;
       border: 1px none red !important;
       padding: 0;
       margin: 0; }
 
-    /* line 195, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 197, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header nav ul.nav li a#nav-log-in {
       color: #ccc; }
 
-    /* line 199, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 201, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header nav ul.nav li#nav-li-ask-question a {
       background: none !important; }
 
-    /* line 203, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 205, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header nav ul.nav li a.btn {
       background: none !important;
       border: 1px none red !important;
       text-align: left;
       color: #ccc; }
 
-    /* line 211, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 213, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header nav ul.nav li a.btn:hover {
       background: #333 !important;
       border: 1px none red !important;
       text-align: left;
       color: #ccc; }
 
-    /* line 219, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+    /* line 221, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
     .ss-page-header .navbar-default .navbar-collapse, .ss-page-header .navbar-default .navbar-form {
       border-color: #595959; }
  }
 
-/* line 227, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-footer {
+/* line 229, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+.ss-page-footer {
   border-top: 1px solid #ddd;
   padding: 10px 10px 10px 10px; }
 
-/* line 232, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
-footer p {
+/* line 234, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/layout */
+.ss-page-footer p {
   font-size: 10px;
   color: #666; }
 
@@ -6928,22 +6933,23 @@ text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
   margin: 5px 0;
   width: 205px; }
 
-/* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-account-dropdown */
-.ss-account-dropdown ul {
-  line-height: 25px; }
+/* .ss-account-dropdown ul {
+  @extend .pull-right;
+  line-height: 25px;
+}
 
-/* line 6, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-account-dropdown */
 .ss-account-dropdown li {
   padding-left: 10px;
   padding-right: 10px;
-  width: 300px; }
+  width: 300px;
+}
 
-/* line 12, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-account-dropdown */
 .ss-account-dropdown button {
+  @extend .pull-right;
   margin-bottom: 5px;
   margin-right: 10px;
-  margin-top: 5px; }
-
+  margin-top: 5px;
+} */
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-bar */
 .ss-search-bar {
   /* Search */
