@@ -118,6 +118,9 @@ define(['app/module'], function (module) {
         * @param {string} $label Menu label text
         */
         scope.selectTagTypeahead = function ($item, $model, $label) {
+          window.console.dir('item:' + $item);
+          window.console.dir('model:' + $model);
+          window.console.log('label:' + $label);
           scope.selectTag($item);
           scope.selected = ''; // Clear typeahead menu
         };

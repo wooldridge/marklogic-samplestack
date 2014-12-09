@@ -23,10 +23,22 @@
 
           <div class="list-group-item">
             <div class="checkbox">
-              <label class="disabled"><input type="checkbox" disabled="disabled" /> Show my contributions only</label>
+              <label ng-disabled="!store.session">
+                <input
+                  type="checkbox"
+                  ng-model="showMineOnly"
+                  ng-change="onCriteriaChange()"
+                  ng-disabled="!store.session"
+                /> Show my contributions only</label>
             </div>
             <div class="checkbox">
-              <label class="disabled"><input type="checkbox" disabled="disabled"  checked="checked"  /> Show resolved only</label>
+              <label ng-disabled="!store.session">
+                <input
+                  type="checkbox"
+                  ng-model="resolvedOnly"
+                  ng-change="onCriteriaChange()"
+                  ng-disabled="!store.session"
+                /> Show resolved only</label>
             </div>
           </div>
 
@@ -49,90 +61,12 @@
             <button class="btn btn-default btn-xs pull-right" >Clear Tags</button>
             <h4>Tags</h4>
           </div>
-          <div class="list-group-section">
-            <div class="tags-module-search-wrapper">
-              <div class="tags-module-search clearfix">
-                <div id="tags-search-clear" class="tags-module-clear-icon hide" >
-                  <i class="glyphicon glyphicon-remove"></i>
-                </div>
-                <div class="tags-module-search-icon">
-                  <i class="glyphicon glyphicon-search"></i>
-                </div>
-                <div class="tags-module-search-input">
-                  <input type="search" id="tags-search" class="form-control input-sm" placeholder="Search Tags"  autocomplete="off" />
-                </div>
-              </div>
-            </div>
-            <div class="selected-tags" >
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" checked="checked" />
-                  angularjs <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" checked="checked" />
-                  jquery <span class="text-muted">(1229)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" checked="checked" />
-                  node <span class="text-muted">(1092)</span></label>
-              </div>
-            </div>
-            <div class="unselected-tags" >
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  accdd <span class="text-muted">(1229)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  ample sdk <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  atoms.js <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  cupq <span class="text-muted">(1229)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  dhtmlx <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  dijo <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  echo3 <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  ember.js <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  enyo <span class="text-muted">(1092)</span></label>
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" />
-                  ext js <span class="text-muted">(1092)</span></label>
-              </div>
-            </div>
-            <button id="button-more-tags" class="btn btn-default btn-block btn-sm" data-toggle="modal" data-target="#tagsModal" >More Tags</button>
+          <ss-facet-tags
+            criteria="search.criteria.constraints.tags"
+            results="search.results.facets.tags"
+            totals="{ total: search.results.total, shadow: search.results.shadowTotals.tags }"
+            num-tags="8"
+          ></ss-facet-tags>
 
           </div> <!-- list-group-section (tags) -->
 

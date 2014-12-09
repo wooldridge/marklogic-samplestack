@@ -7215,40 +7215,49 @@ text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
   text-align: center;
   width: 33%; }
 
-/* line 3, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
-.ss-filters-tags header {
-  display: inline-block;
-  width: 100%; }
-/* line 8, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
-.ss-filters-tags h3 {
-  float: left;
-  position: relative; }
+/* .ss-filters-tags {
 
-/* line 14, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
+  header {
+    display: inline-block;
+    width: 100%;
+  }
+
+  h3 {
+    float: left;
+    position: relative;
+  }
+}
+
 .ss-clear-tags {
   cursor: pointer;
   float: right;
   margin: 21px 30px 0 0;
-  position: relative; }
+  position: relative;
+}
 
-/* line 24, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
-.ss-facet-tags input.ss-typeahead-input {
-  clear: all;
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  width: 202px; }
-/* line 32, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
-.ss-facet-tags ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
 
-/* line 39, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-facet-tags */
+.ss-facet-tags {
+
+  input.ss-typeahead-input {
+    clear: all;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    width: 202px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .ss-open-all-tags {
   cursor: pointer;
-  margin-top: 3px; }
-
+  margin-top: 3px;
+}
+*/
 /* .ss-metadata {
   min-height: 40px;
 
