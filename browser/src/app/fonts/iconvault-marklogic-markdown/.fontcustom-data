@@ -1,0 +1,26 @@
+{
+  "fonts": [
+    "iconvault_f89a5782eb48a847fc89c35f838f20bf.ttf",
+    "iconvault_f89a5782eb48a847fc89c35f838f20bf.woff",
+    "iconvault_f89a5782eb48a847fc89c35f838f20bf.eot",
+    "iconvault_f89a5782eb48a847fc89c35f838f20bf.svg"
+  ],
+  "templates": [
+    "iconvault-preview.html",
+    "iconvault-preview.css"
+  ],
+  "file_name": "iconvault_f89a5782eb48a847fc89c35f838f20bf",
+  "glyphs": [
+    "hr",
+    "ordered-list",
+    "list",
+    "code",
+    "image",
+    "italic",
+    "undo",
+    "redo",
+    "header",
+    "bold",
+    "link"
+  ]
+}
