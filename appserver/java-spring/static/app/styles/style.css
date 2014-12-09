@@ -6406,185 +6406,142 @@ h1 {
   color: #666; }
 
 /* line 3, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-main {
+.ss-explore {
   margin-top: 20px;
   min-height: 555px; }
 
 @media (max-width: 768px) {
   /* line 9, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-  main {
+  .ss-explore {
     margin-top: 130px !important; }
  }
 
-/* .ss-explore {
-  display: block;
-  max-width: $view-max-width;
-  min-width: $view-min-width;
-  position: relative;
-} */
-/* .ss-filters-results {
-  padding-left: 310px;
-  position: relative;
-}
-
+/* line 14, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
 .ss-filters {
-  left: 0;
-  min-width: 300px;
-  padding-left: 15px;
-  padding-right: 0;
-  position: absolute;
-  width: 250px;
-} */
-/* SIDEBAR ========================================== */
-/* line 40, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd; }
-
-/* line 46, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-header, .list-group .list-group-subheader {
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-top: 1px solid #ddd; }
-
-/* line 56, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-header {
-  background: #f2f2f2;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  position: relative;
-  display: block;
-  padding: 10px 15px;
-  margin-bottom: -1px;
-  border: 1px solid #ddd; }
-
-/* line 69, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-header button, .list-group .list-group-subheader button {
-  margin-top: -2px; }
-
-/* line 73, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  padding: 10px 15px; }
-
-/* line 81, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-item h4, .list-group .list-group-header h4, .list-group .list-group-subheader h4 {
-  margin-top: 1px;
-  margin-bottom: 2px;
-  font-size: 14px; }
-
-/* line 87, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-subheader h4 {
-  margin-bottom: 0px; }
-
-/* line 91, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group div.checkbox {
-  margin-top: 0; }
-
-/* line 95, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .checkbox label {
-  font-size: 85%; }
-
-/* line 99, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group label.disabled {
-  color: #bababa; }
-
-/* line 103, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .checkbox input {
-  margin-top: 1px; }
-
-/* line 107, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .checkbox:last-child {
-  margin-bottom: 0; }
-
-/* line 111, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section .search-tags {
-  padding: 0 0 15px 0;
-  border-bottom: 1px solid #ddd; }
-
-/* line 116, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section .search-tags input {
-  padding-left: 26px !important;
-  background: url('/images/glyphicons_027_search.png') no-repeat 2% 48%;
-  background-size: 16px 16px; }
-
-/* line 122, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section .unselected-tags {
-  padding: 15px 0 15px 0;
-  padding-bottom: 15px; }
-
-/* line 127, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group .list-group-section .selected-tags {
-  padding: 15px 0 15px 0;
-  border-bottom: 1px solid #ddd; }
-
-/* line 133, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.list-group div.list-group-section:last-child {
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px; }
-
-/* Tags Mdule Search */
-/* line 147, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .tags-module-search {
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-
-/* line 152, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .tags-module-search-icon {
-  float: left;
-  margin: 6px 0px 0px 10px; }
-
-/* line 157, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .tags-module-search-input {
-  float: left;
-  padding-top: 1px;
-  width: 80%; }
-
-/* line 163, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .tags-module-search-input input {
-  border: none;
-  box-shadow: inset 0 0px 0px, 0 0 0px;
-  margin-left: 0;
-  margin-top: 1px;
-  margin-bottom: 0px;
-  width: 100%; }
-
-/* line 172, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .glyphicon-search {
-  margin-top: 2px; }
-
-/* line 176, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.tags-module-search-wrapper .glyphicon-remove {
-  margin-top: 8px;
-  margin-right: 12px;
-  color: #ccc;
-  float: right; }
-
-/* Hides High Chart tag */
-/* line 185, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
-  display: none; }
-
-/* line 189, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-.input-daterange {
-  margin-bottom: 10px; }
-
-/* line 193, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
-#button-more-tags {
-  margin-bottom: 10px; }
+  /* Tags Mdule Search */
+  /* Hides High Chart tag */ }
+  /* line 16, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd; }
+  /* line 22, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-header, .ss-filters .list-group .list-group-subheader {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd; }
+  /* line 32, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-header {
+    background: #f2f2f2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 1px solid #ddd; }
+  /* line 45, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-header button, .ss-filters .list-group .list-group-subheader button {
+    margin-top: -2px; }
+  /* line 49, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px; }
+  /* line 57, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-item h4, .ss-filters .list-group .list-group-header h4, .ss-filters .list-group .list-group-subheader h4 {
+    margin-top: 1px;
+    margin-bottom: 2px;
+    font-size: 14px; }
+  /* line 63, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-subheader h4 {
+    margin-bottom: 0px; }
+  /* line 67, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group div.checkbox {
+    margin-top: 0; }
+  /* line 71, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .checkbox label {
+    font-size: 85%; }
+  /* line 75, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group label.disabled {
+    color: #bababa; }
+  /* line 79, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .checkbox input {
+    margin-top: 1px; }
+  /* line 83, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .checkbox:last-child {
+    margin-bottom: 0; }
+  /* line 87, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section .search-tags {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ddd; }
+  /* line 92, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section .search-tags input {
+    padding-left: 26px !important;
+    background: url('/images/glyphicons_027_search.png') no-repeat 2% 48%;
+    background-size: 16px 16px; }
+  /* line 98, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section .unselected-tags {
+    padding: 15px 0 15px 0;
+    padding-bottom: 15px; }
+  /* line 103, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group .list-group-section .selected-tags {
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #ddd; }
+  /* line 109, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .list-group div.list-group-section:last-child {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px; }
+  /* line 123, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .tags-module-search {
+    border: 1px solid #ccc;
+    border-radius: 3px; }
+  /* line 128, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .tags-module-search-icon {
+    float: left;
+    margin: 6px 0px 0px 10px; }
+  /* line 133, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .tags-module-search-input {
+    float: left;
+    padding-top: 1px;
+    width: 80%; }
+  /* line 139, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .tags-module-search-input input {
+    border: none;
+    box-shadow: inset 0 0px 0px, 0 0 0px;
+    margin-left: 0;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    width: 100%; }
+  /* line 148, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .glyphicon-search {
+    margin-top: 2px; }
+  /* line 152, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .tags-module-search-wrapper .glyphicon-remove {
+    margin-top: 8px;
+    margin-right: 12px;
+    color: #ccc;
+    float: right; }
+  /* line 161, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
+    display: none; }
+  /* line 165, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters .input-daterange {
+    margin-bottom: 10px; }
+  /* line 169, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+  .ss-filters #button-more-tags {
+    margin-bottom: 10px; }
 
 /*** ASK VIEW ***/
 /* line 5, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */

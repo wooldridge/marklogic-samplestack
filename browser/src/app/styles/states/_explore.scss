@@ -1,41 +1,17 @@
 //** EXPLORE VIEW ***
 
-main {
+.ss-explore {
   margin-top: 20px;
   min-height: 555px;
 }
 
 @media (max-width: 768px) {
-  main {
+  .ss-explore {
     margin-top: 130px!important;
   }
 }
 
-/* .ss-explore {
-  display: block;
-  max-width: $view-max-width;
-  min-width: $view-min-width;
-  position: relative;
-} */
-
-// Container for fixed+fluid content
-/* .ss-filters-results {
-  padding-left: 310px;
-  position: relative;
-}
-
 .ss-filters {
-  left: 0;
-  min-width: 300px;
-  padding-left: 15px;
-  padding-right: 0;
-  position: absolute;
-  width: 250px;
-} */
-
-
-/* SIDEBAR ========================================== */
-
 
   .list-group .list-group-section {
     border-left: 1px solid #ddd;
@@ -194,3 +170,4 @@ main {
     margin-bottom: 10px;
   }
 
+}
