@@ -31,10 +31,16 @@
           </div>
 
           <ul class="nav nav-tabs question-filters" role="tablist">
-            <li class="inactive"><a href="#" role="tab" data-toggle="tab">Relevance</a></li>
-            <li class="active"><a href="#" role="tab" data-toggle="tab">Newest</a></li>
-            <li><a href="#" role="tab" data-toggle="tab">Votes</a></li>
+            <li
+              ng-repeat="sort in sorts"
+              ng-click="setSort(sort.value)"
+              ng-class="{ 'ss-sort-active': getActiveSort() == sort.value }"
+            >
+              <a href="#" role="tab" data-toggle="tab">{{sort.label}}</a>
+            </li>
           </ul>
+
+
         </div> <!-- col-md-12 -->
       </div> <!-- row tab-wrapper -->
 

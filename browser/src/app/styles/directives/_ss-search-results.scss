@@ -11,15 +11,15 @@
     padding-top:0;
   }
 
-  .question-row:nth-child(even) {
+  .question-row:nth-child(odd) {
     background: #fff;
   }
 
-  .question-row:nth-of-type(odd) {
+  .question-row:nth-of-type(even) {
     background: #f7f7f9;
   }
 
-  .question-row:nth-of-type(even) {
+  .question-row:nth-of-type(odd) {
     background: #fff;
   }
 

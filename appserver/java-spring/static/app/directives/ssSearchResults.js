@@ -43,11 +43,11 @@ define(['app/module'], function (module) {
             //Sort settings
             scope.sorts = [
               {
-                label: 'newest',
+                label: 'Newest',
                 value: ['active']
               },
               {
-                label: 'votes',
+                label: 'Votes',
                 value: ['votes']
               }
             ];
@@ -57,7 +57,7 @@ define(['app/module'], function (module) {
             ) {
               scope.sorts.unshift(
                 {
-                  label: 'relevance',
+                  label: 'Relevance',
                   value: ['relevance']
                 }
               );

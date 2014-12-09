@@ -7294,13 +7294,13 @@ span.label-default {
   .ss-results .question-row:first-child {
     padding-top: 0; }
   /* line 14, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .question-row:nth-child(even) {
+  .ss-results .question-row:nth-child(odd) {
     background: #fff; }
   /* line 18, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .question-row:nth-of-type(odd) {
+  .ss-results .question-row:nth-of-type(even) {
     background: #f7f7f9; }
   /* line 22, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .question-row:nth-of-type(even) {
+  .ss-results .question-row:nth-of-type(odd) {
     background: #fff; }
   /* line 29, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .question-row .question-voting-stats .voting-stats-module {
