@@ -1,77 +1,82 @@
-    <div id="questions" class="col-md-9 col-md-push-3">
+<div class="col-md-9 col-md-push-3">
 
-      <div class="row tab-wrapper">
-        <div class="col-md-12" >
+  <header class="row tab-wrapper">
+    <div class="col-md-12" >
 
-          <div ng-if="search.results.total > 0">
-            <!-- results summary in search mode -->
-            <div class="results-info" ng-if="searchMode()">
-              Search Results:
-              <span
-                class="ss-search-results-count"
-                ng-bind-template="{{search.results.total | number:0}}"
-              ></span>
-              Questions
-            </div>
-            <!-- results summary in browse mode -->
-            <div class="results-info" ng-if="!searchMode()">
-              Browsing
-              <span
-                class="ss-search-results-count"
-                ng-bind-template="{{search.results.total | number:0}}"
-              ></span>
-              Questions
-            </div>
-          </div>
-          <!-- no results -->
-          <div ng-if="search.results.total == 0">
-            <div class="results-info" ng-if="searchMode()">
-              No Results
-            </div>
-          </div>
-
-          <ul class="nav nav-tabs question-filters" role="tablist">
-            <li
-              ng-repeat="sort in sorts"
-              ng-click="setSort(sort.value)"
-              ng-class="{ 'ss-sort-active': getActiveSort() == sort.value }"
-            >
-              <a href="#" role="tab" data-toggle="tab">{{sort.label}}</a>
-            </li>
-          </ul>
-
-
-        </div> <!-- col-md-12 -->
-      </div> <!-- row tab-wrapper -->
-
-      <section
-        class="ss-result row clearfix question-row"
-        ng-repeat="item in search.results.items"
-      >
-        <ss-search-result></ss-search-result>
-      </section>
-
-      <!-- <div class="row clearfix question-row ">
-
-      </div> --> <!-- row clearfix question-row -->
-
-      <div class="row paging">
-        <div class="col-md-11 col-sm-10 col-xs-9">
-          <ul class="pagination">
-            <li class="disabled"><a href="#"><span class="caret left"></span></a></li>
-            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">...</a></li>
-            <li><a href="#">20</a></li>
-            <li><a href="#"><span class="caret right"></span></a></li>
-          </ul>
+      <div ng-if="search.results.total > 0">
+        <!-- results summary in search mode -->
+        <div class="results-info" ng-if="searchMode()">
+          Search Results:
+          <span
+            class="ss-search-results-count"
+            ng-bind-template="{{search.results.total | number:0}}"
+          ></span>
+          Questions
         </div>
-      </div> <!-- row paging -->
+        <!-- results summary in browse mode -->
+        <div class="results-info" ng-if="!searchMode()">
+          Browsing
+          <span
+            class="ss-search-results-count"
+            ng-bind-template="{{search.results.total | number:0}}"
+          ></span>
+          Questions
+        </div>
+      </div>
+      <!-- no results -->
+      <div ng-if="search.results.total == 0">
+        <div class="results-info" ng-if="searchMode()">
+          No Results
+        </div>
+      </div>
 
-    </div> <!-- questions -->
+      <ul class="nav nav-tabs question-filters" role="tablist">
+        <li
+          ng-repeat="sort in sorts"
+          ng-click="setSort(sort.value)"
+          ng-class="{ 'ss-sort-active': getActiveSort() == sort.value }"
+        >
+          <a href="#" role="tab" data-toggle="tab">{{sort.label}}</a>
+        </li>
+      </ul>
+
+
+    </div> <!-- col-md-12 -->
+  </header> <!-- header tab-wrapper -->
+
+  <div ng-if="search.$ml.waiting" class="spinner"></div>
+  <div ng-if="!search.$ml.waiting">
+    <!-- .question-row ---> .ss-result -->
+    <section
+      class="ss-result row clearfix question-row"
+      ng-repeat="item in search.results.items"
+    >
+      <ss-search-result></ss-search-result>
+    </section>
+
+  <!-- <div class="row clearfix question-row ">
+
+  </div> --> <!-- row clearfix question-row -->
+
+    <div class="row paging">
+      <div class="col-md-11 col-sm-10 col-xs-9">
+        <ul class="pagination">
+          <li class="disabled"><a href="#"><span class="caret left"></span></a></li>
+          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">20</a></li>
+          <li><a href="#"><span class="caret right"></span></a></li>
+        </ul>
+      </div>
+    </div> <!-- row paging -->
+
+  </div>
+
+</div> <!-- col-md-9 col-md-push-3 -->
 
 
 
