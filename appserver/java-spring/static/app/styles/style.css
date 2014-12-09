@@ -7249,18 +7249,22 @@ text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
   cursor: pointer;
   margin-top: 3px; }
 
-/* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-qna-doc-metadata */
-.ss-metadata {
-  min-height: 40px; }
-  /* line 4, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-qna-doc-metadata */
-  .ss-metadata > * {
-    display: inline-block; }
+/* .ss-metadata {
+  min-height: 40px;
 
-/* line 9, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-qna-doc-metadata */
+  > * {
+    display: inline-block;
+  }
+}
+
 .ss-author {
   float: right;
   padding: 5px;
-  position: relative; }
+  position: relative;
+} */
+/* line 15, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-qna-doc-metadata */
+span.label-default {
+  background-color: #777; }
 
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
 .ss-results {
