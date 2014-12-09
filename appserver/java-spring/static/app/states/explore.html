@@ -4,6 +4,209 @@
 
 <main class="container-fluid">
 
+    <!-- <section class="ss-results">
+      <ui-view></ui-view>
+    </section> -->
+
+
+  <div class="row">
+
+    <div id="questions" class="col-md-9 col-md-push-3">
+
+      <div class="row tab-wrapper">
+        <div class="col-md-12" >
+          <div class="results-info">Browsing 27,348 Questions</div>
+          <ul class="nav nav-tabs question-filters" role="tablist">
+            <li class="inactive"><a href="#" role="tab" data-toggle="tab">Relevance</a></li>
+            <li class="active"><a href="#" role="tab" data-toggle="tab">Newest</a></li>
+            <li><a href="#" role="tab" data-toggle="tab">Votes</a></li>
+          </ul>
+        </div> <!-- col-md-12 -->
+      </div> <!-- row tab-wrapper -->
+
+      <div class="row clearfix question-row ">
+        <div class="col-md-1 col-sm-2 col-xs-3 question-voting-stats">
+          <div class="voting-stats-module">
+            <div class="voting-stats-header">Votes</div>
+            <div class="voting-stats">4,831</div>
+            <div class="voting-answers answered ">200</div>
+            <div class="voting-answers-footer">Answers</div>
+          </div> <!-- voting-stats-module -->
+        </div> <!-- col-md-1 col-sm-2 col-xs-3 question-voting-stats -->
+        <div class="col-md-11 col-sm-10 col-xs-9 question-wrapper">
+          <div class="question-inner">
+            <h4><a href="qa-logged-out.php">What does the yield keyword do in Python?</a></h4>
+          </div> <!-- question-inner -->
+          <div class="question-info-wrapper clearfix">
+            <div class="question-info">
+              <span class="started">Asked Oct 23 '08 at 22:21&nbsp;<a href="http://www.stackoverflow.com" target="_blank" >Alex. S.&nbsp;&nbsp;<span class="glyphicon glyphicon-new-window" ></span></a>
+              &nbsp;&nbsp;[2647]</span>
+            </div>
+            <div class="question-tags">
+              <span class="label label-default">python</span>
+              <span class="label label-default">iterator</span>
+              <span class="label label-default">generator</span>
+              <span class="label label-default">yield</span>
+            </div>
+          </div> <!-- question-info-wrapper clearfix -->
+        </div> <!-- col-md-11 col-sm-10 col-xs-9 question-wrapper -->
+      </div> <!-- row clearfix question-row -->
+
+      <div class="row paging">
+        <div class="col-md-11 col-sm-10 col-xs-9">
+          <ul class="pagination">
+            <li class="disabled"><a href="#"><span class="caret left"></span></a></li>
+            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">20</a></li>
+            <li><a href="#"><span class="caret right"></span></a></li>
+          </ul>
+        </div>
+      </div> <!-- row paging -->
+
+    </div> <!-- questions -->
+
+    <div id="sidebar" class="col-md-3 col-md-pull-9">
+
+      <div>
+        <div class="list-group">
+
+          <div class="list-group-header">
+            <button class="btn btn-default btn-xs pull-right" >Clear All</button>
+            <h4>Filter Results</h4>
+          </div>
+
+          <div class="list-group-item">
+            <div class="checkbox">
+              <label class="disabled"><input type="checkbox" disabled="disabled" /> Show my contributions only</label>
+            </div>
+            <div class="checkbox">
+              <label class="disabled"><input type="checkbox" disabled="disabled"  checked="checked"  /> Show resolved only</label>
+            </div>
+          </div>
+
+          <div class="list-group-subheader">
+            <button class="btn btn-default btn-xs pull-right" >Clear Dates</button>
+            <h4>Date</h4>
+          </div>
+          <div class="list-group-section">
+            <!--BEGIN: HIGH CHARTS-->
+            <div id="container" style=" margin: 0 -8px; min-height:200px; padding-bottom:10px;"></div>
+            <!--END: HIGH CHARTS-->
+            <div class="input-daterange input-group" id="datepicker">
+              <input type="text" class="input-sm form-control" name="start" placeholder="01/01/2014" />
+              <span class="input-group-addon">to</span>
+              <input type="text" class="input-sm form-control" name="end"   placeholder="12/31/2014" />
+            </div>
+          </div>
+
+          <div class="list-group-subheader">
+            <button class="btn btn-default btn-xs pull-right" >Clear Tags</button>
+            <h4>Tags</h4>
+          </div>
+          <div class="list-group-section">
+            <div class="tags-module-search-wrapper">
+              <div class="tags-module-search clearfix">
+                <div id="tags-search-clear" class="tags-module-clear-icon hide" >
+                  <i class="glyphicon glyphicon-remove"></i>
+                </div>
+                <div class="tags-module-search-icon">
+                  <i class="glyphicon glyphicon-search"></i>
+                </div>
+                <div class="tags-module-search-input">
+                  <input type="search" id="tags-search" class="form-control input-sm" placeholder="Search Tags"  autocomplete="off" />
+                </div>
+              </div>
+            </div>
+            <div class="selected-tags" >
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked" />
+                  angularjs <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked" />
+                  jquery <span class="text-muted">(1229)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" checked="checked" />
+                  node <span class="text-muted">(1092)</span></label>
+              </div>
+            </div>
+            <div class="unselected-tags" >
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  accdd <span class="text-muted">(1229)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  ample sdk <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  atoms.js <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  cupq <span class="text-muted">(1229)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  dhtmlx <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  dijo <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  echo3 <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  ember.js <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  enyo <span class="text-muted">(1092)</span></label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" />
+                  ext js <span class="text-muted">(1092)</span></label>
+              </div>
+            </div>
+            <button id="button-more-tags" class="btn btn-default btn-block btn-sm" data-toggle="modal" data-target="#tagsModal" >More Tags</button>
+
+          </div> <!-- list-group-section (tags) -->
+
+        </div> <!-- list-group -->
+      </div>
+    </div> <!-- sidebar -->
+
+  </div> <!-- row -->
+
+
+
+
+<!--
+
+
   <section class="ss-explore">
 
     <div class="ss-filters-results">
@@ -67,5 +270,7 @@
     </section>
 
   </section>
+
+-->
 
 </main>

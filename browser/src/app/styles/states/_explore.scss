@@ -1,13 +1,25 @@
 //** EXPLORE VIEW ***
-.ss-explore {
+
+main {
+  margin-top: 20px;
+  min-height: 555px;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: 130px!important;
+  }
+}
+
+/* .ss-explore {
   display: block;
   max-width: $view-max-width;
   min-width: $view-min-width;
   position: relative;
-}
+} */
 
 // Container for fixed+fluid content
-.ss-filters-results {
+/* .ss-filters-results {
   padding-left: 310px;
   position: relative;
 }
@@ -19,4 +31,166 @@
   padding-right: 0;
   position: absolute;
   width: 250px;
-}
+} */
+
+
+/* SIDEBAR ========================================== */
+
+
+  .list-group .list-group-section {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+
+  .list-group .list-group-header,
+  .list-group .list-group-subheader {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+
+  .list-group .list-group-header {
+    background: #f2f2f2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    border: 1px solid #ddd;
+  }
+
+  .list-group .list-group-header button,
+  .list-group .list-group-subheader button {
+    margin-top: -2px;
+  }
+
+  .list-group .list-group-section {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 10px 15px;
+  }
+
+  .list-group .list-group-item h4,
+  .list-group .list-group-header h4,
+  .list-group .list-group-subheader h4 {
+    margin-top: 1px;
+    margin-bottom: 2px;
+    font-size:14px;
+  }
+
+  .list-group .list-group-subheader h4 {
+    margin-bottom: 0px;
+  }
+
+  .list-group div.checkbox {
+    margin-top: 0;
+  }
+
+  .list-group .checkbox label {
+    font-size: 85%;
+  }
+
+  .list-group label.disabled {
+    color: #bababa;
+  }
+
+  .list-group .checkbox input {
+    margin-top:1px;
+  }
+
+  .list-group .checkbox:last-child {
+    margin-bottom: 0;
+  }
+
+  .list-group .list-group-section .search-tags {
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .list-group .list-group-section .search-tags input {
+    padding-left: 26px!important;
+    background:url('/images/glyphicons_027_search.png') no-repeat 2% 48%;
+    background-size:16px 16px;
+  }
+
+  .list-group .list-group-section .unselected-tags {
+    padding: 15px 0 15px 0;
+    padding-bottom: 15px;
+  }
+
+  .list-group .list-group-section .selected-tags {
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+
+  .list-group div.list-group-section:last-child {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+
+  /* Tags Mdule Search */
+  .tags-module-search-wrapper .tags-module-search {
+    border:1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .tags-module-search-wrapper .tags-module-search-icon {
+    float:left;
+    margin:6px 0px 0px 10px;
+  }
+
+  .tags-module-search-wrapper .tags-module-search-input {
+    float:left;
+    padding-top:1px;
+    width: 80%;
+  }
+
+  .tags-module-search-wrapper .tags-module-search-input input {
+    border: none;
+    box-shadow: inset 0 0px 0px, 0 0 0px;
+    margin-left: 0;
+    margin-top: 1px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .tags-module-search-wrapper .glyphicon-search {
+    margin-top:2px;
+  }
+
+  .tags-module-search-wrapper .glyphicon-remove {
+    margin-top:8px;
+    margin-right: 12px;
+    color:#ccc;
+    float:right;
+  }
+
+
+  /* Hides High Chart tag */
+  text[style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"] {
+    display: none;
+  }
+
+  .input-daterange {
+    margin-bottom: 10px;
+  }
+
+  #button-more-tags {
+    margin-bottom: 10px;
+  }
+
