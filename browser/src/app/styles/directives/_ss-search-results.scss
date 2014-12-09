@@ -1,145 +1,208 @@
 .ss-results {
-  margin-left: 20px;
-  max-width: 1100;
-  padding-left: 0;
-  position: relative;
 
-  header {
-    display: inline-block;
-    height: 62px;
-    width: 100%;
+  /* Question Row */
+  .question-row {
+    padding-top:10px;
+    padding-bottom:10px;
+    border-bottom: 1px solid #eeeeee;
   }
 
-  h2 {
-    float: left;
-    margin: 0;
-    padding-top: 13px;
-    position: relative;
-    vertical-align: middle;
+  .question-row:first-child {
+    padding-top:0;
   }
 
-  ul.ss-sort {
-    float: right;
-    margin-top: 20px;
-    position: relative;
+  .question-row:nth-child(even) {
+    background: #fff;
   }
 
-  li {
-    cursor: pointer;
-    margin-left: 10px;
+  .question-row:nth-of-type(odd) {
+    background: #f7f7f9;
   }
 
-  li.ss-sort-active {
-    font-weight: bold;
+  .question-row:nth-of-type(even) {
+    background: #fff;
   }
 
-  .ss-paging {
-    margin-right: 20px;
+
+  /* Question Voting Stats */
+
+  .question-row .question-voting-stats .voting-stats-module {
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:59px;
+  }
+
+  .question-row .question-voting-stats .voting-stats-module .voting-answers-footer,
+  .question-row .question-voting-stats .voting-stats-module .voting-stats-header {
+    background: #e7e7e7;
+    font-size:8px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2px 0;
+    color: #333333;
+    letter-spacing: 1px;
     overflow: hidden;
-    padding-top: 13px;
-    position: absolute;
-    right: 0;
-    vertical-align: middle;
-
-    button {
-      width: 35px;
-    }
-
-    span {
-      vertical-align: middle;
-    }
   }
-}
 
-.ss-search-results-footer {
-  height: 62px;
-  position: relative;
-}
+  .question-row .question-voting-stats .voting-stats-module .voting-stats {
+    font-size:16px;
+    font-weight: 500;
+    padding: 0px 0 2px 0;
+    margin:0;
+    line-height: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+  }
 
-.ss-result {
-  border-bottom: solid 1px #000;
-  padding: 10px;
-  padding-left: 80px;
+  .question-row .question-voting-stats .voting-stats-module .voting-answers {
+    font-size:16px;
+    font-weight: 500;
+    padding: 0px 0 2px 0;
+    margin:0;
+    line-height: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+  }
 
-  .ss-votes {
-    background-color: #eee;
-    border: solid 1px #ccc;
-    height: 84px;
-    left: 0;
-    position: absolute;
-    width: 70px;
+  .question-row .question-voting-stats .voting-stats-module .answered {
+    color:#fff;
+    background: #1f9072;
+  }
 
-    .ss-score,
-    .ss-answers {
-      padding: 0;
 
-      label,
-      span,
-      .ss-divider {
-        display: block;
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        z-index: 20;
+  /* Question Wrapper */
+  .question-row .question-wrapper .question-inner {
+    min-height: 50px;
+  }
+
+  .question-row .question-wrapper .question-inner h2,
+  .question-row .question-wrapper .question-inner h3,
+  .question-row .question-wrapper .question-inner h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding:0;
+    line-height:
+  }
+
+  .question-row .question-wrapper .question-inner p {
+    font-size:12px;
+  }
+
+
+  .started {
+    font-size:11px;
+    text-align:right;
+    float:right;
+    color: #666;
+  }
+
+
+  /* Question Info */
+  .question-row .question-wrapper .question-info-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:0;
+  }
+
+
+  /* Question Tags */
+  .question-row .question-wrapper .question-info-wrapper .question-tags {
+    width: 60%;
+    float:left;
+  }
+
+
+  /* Question Info */
+  .question-row .question-wrapper .question-info-wrapper .question-info {
+    float:right;
+    width: 35%;
+    padding:4px;
+    margin: 0;
+  }
+
+  /* Not sure why this is not picking up the defualt A blue */
+  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window {
+    color:#428bca;
+  }
+
+  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:hover {
+    color:#2a6496;
+  }
+
+  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:visited {
+    color:#428bca;
+  }
+
+  .question-row .question-wrapper .question-info-wrapper .question-info span {
+    line-height:11px!important;
+    font-size:11px;
+    text-align:right;
+    padding:0;
+    margin: 0;
+    color: #666;
+  }
+
+  .question-row a.question,
+  .question-row a.answer {
+    font-weight: 600;
+  }
+
+  .answer-module-divider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .answer-module-divider hr {
+    border-color:#ebebeb;
+  }
+
+  /* NAV TABS =============================================== */
+    .tab-wrapper {
+      border-bottom:1px solid #ddd;
+    }
+
+    .question-filters {
+      border-bottom: none;
+      float: right;
+    }
+
+    @media (max-width: 768px) {
+      .question-filters {
+        float: left;
       }
     }
 
-    .ss-score label {
-      top: -2px;
+    .nav-tabs li a {
+      border: 1px solid #ddd;
+      color: #79b;
     }
 
-    .ss-score span {
-      font-size: 18px;
-      top: 14px;
+    .nav-tabs li.active a {
+      color: #333;
     }
 
-    .ss-answers label {
-      top: 62px;
+    .nav-tabs li a.active {
+      border: 1px solid #ddd;
+      background: #fff;
+      color:#000!important;
     }
 
-    .ss-answers span {
-      font-size: 18px;
-      top: 43px;
+    .nav-tabs li.inactive a {
+      border: 1px solid #ddd;
+      background: #f7f7f9;
+      color: #cacaca;
     }
 
-    .ss-divider {
-      background-color: #000;
-      height: 1px;
-      margin: 0 4px;
-      position: absolute;
-      top: 40px;
-      width: 60px;
+    .nav-tabs li.inactive a:hover {
+      border: 1px solid #ddd;
+      background: #f7f7f9;
+      color: #c9c9c9;
     }
 
-    .ss-checked {
-      background-image: url('/app/images/checkmark.png');
-      height: 40px;
-      left: 12px;
-      position: absolute;
-      top: 41px;
-      width: 50px;
-      z-index: 10;
-    }
 
-  }
 
-  .ss-highlight {
-    font-weight: bold;
-  }
-
-  .ss-prefix {
-    color: #428bca;
-  }
-
-  p {
-    min-height: 25px;
-  }
-}
-
-.ss-result-title {
-  font-size: larger;
-}
-
-.ss-search-result .ss-metadata {
-  border-bottom: 0 solid #000;
 }
