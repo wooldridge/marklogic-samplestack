@@ -48,14 +48,10 @@
             <h4>Date</h4>
           </div>
           <div class="list-group-section">
-            <!--BEGIN: HIGH CHARTS-->
-            <div id="container" style=" margin: 0 -8px; min-height:200px; padding-bottom:10px;"></div>
-            <!--END: HIGH CHARTS-->
-            <div class="input-daterange input-group" id="datepicker">
-              <input type="text" class="input-sm form-control" name="start" placeholder="01/01/2014" />
-              <span class="input-group-addon">to</span>
-              <input type="text" class="input-sm form-control" name="end"   placeholder="12/31/2014" />
-            </div>
+            <ss-facet-date-range
+              constraints="search.criteria.constraints"
+              results="search.results.facets.dates"
+            ></ss-facet-date-range>
           </div>
 
           <!-- tags filter -->
