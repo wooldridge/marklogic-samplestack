@@ -25,7 +25,25 @@ define(['app/module'], function (module) {
         link: function (scope, element, attrs) {
           scope.$watch('search.results', function () {
 
-            scope.getActiveSort = function () {
+            scope.sorts = [
+              {
+                label: 'Relevance',
+                value: ['relevance'],
+                active: scope.searchMode()
+              },
+              {
+                label: 'Newest',
+                value: ['active'],
+                active: true
+              },
+              {
+                label: 'Votes',
+                value: ['votes'],
+                active: true
+              }
+            ];
+
+            scope.getSelectedSort = function () {
               if (!scope.search.criteria.sort) {
                 if (scope.search.criteria.q &&
                   scope.search.criteria.q.length
@@ -40,28 +58,6 @@ define(['app/module'], function (module) {
                 return scope.search.criteria.sort[0];
               }
             };
-            //Sort settings
-            scope.sorts = [
-              {
-                label: 'Newest',
-                value: ['active']
-              },
-              {
-                label: 'Votes',
-                value: ['votes']
-              }
-            ];
-
-            if (scope.search.criteria.q &&
-                scope.search.criteria.q.length
-            ) {
-              scope.sorts.unshift(
-                {
-                  label: 'Relevance',
-                  value: ['relevance']
-                }
-              );
-            }
 
             scope.setSort = function (sort) {
               scope.search.criteria.sort = sort;

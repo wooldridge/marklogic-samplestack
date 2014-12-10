@@ -1,32 +1,28 @@
 .ss-results {
 
-  /* Question Row */
-  .question-row {
+  /* result row */
+  .ss-result {
     padding-top:10px;
     padding-bottom:10px;
     border-bottom: 1px solid #eeeeee;
   }
 
-  .question-row:first-child {
-    padding-top:0;
-  }
-
-  .question-row:nth-child(odd) {
+  .ss-result:nth-child(odd) {
     background: #fff;
   }
 
-  .question-row:nth-of-type(even) {
+  .ss-result:nth-of-type(even) {
     background: #f7f7f9;
   }
 
-  .question-row:nth-of-type(odd) {
+  .ss-result:nth-of-type(odd) {
     background: #fff;
   }
 
 
-  /* Question Voting Stats */
+  /* voting stats */
 
-  .question-row .question-voting-stats .voting-stats-module {
+  .ss-result .question-voting-stats .voting-stats-module {
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -34,8 +30,8 @@
     width:59px;
   }
 
-  .question-row .question-voting-stats .voting-stats-module .voting-answers-footer,
-  .question-row .question-voting-stats .voting-stats-module .voting-stats-header {
+  .ss-result .question-voting-stats .voting-stats-module .voting-answers-footer,
+  .ss-result .question-voting-stats .voting-stats-module .voting-stats-header {
     background: #e7e7e7;
     font-size:8px;
     text-transform: uppercase;
@@ -46,7 +42,7 @@
     overflow: hidden;
   }
 
-  .question-row .question-voting-stats .voting-stats-module .voting-stats {
+  .ss-result .question-voting-stats .voting-stats-module .voting-stats {
     font-size:16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -57,7 +53,7 @@
     overflow: hidden;
   }
 
-  .question-row .question-voting-stats .voting-stats-module .voting-answers {
+  .ss-result .question-voting-stats .voting-stats-module .voting-answers {
     font-size:16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -68,27 +64,25 @@
     overflow: hidden;
   }
 
-  .question-row .question-voting-stats .voting-stats-module .answered {
+  .ss-result .question-voting-stats .voting-stats-module .answered {
     color:#fff;
     background: #1f9072;
   }
 
-
-  /* Question Wrapper */
-  .question-row .question-wrapper .question-inner {
+  .ss-result .question-wrapper .question-inner {
     min-height: 50px;
   }
 
-  .question-row .question-wrapper .question-inner h2,
-  .question-row .question-wrapper .question-inner h3,
-  .question-row .question-wrapper .question-inner h4 {
+  .ss-result .question-wrapper .question-inner h2,
+  .ss-result .question-wrapper .question-inner h3,
+  .ss-result .question-wrapper .question-inner h4 {
     margin-top: 0;
     margin-bottom: 3px;
     padding:0;
     line-height:
   }
 
-  .question-row .question-wrapper .question-inner p {
+  .ss-result .question-wrapper .question-inner p {
     font-size:12px;
   }
 
@@ -102,7 +96,7 @@
 
 
   /* Question Info */
-  .question-row .question-wrapper .question-info-wrapper {
+  .ss-result .question-wrapper .question-info-wrapper {
     margin-top: 0;
     margin-bottom: 0;
     padding:0;
@@ -110,14 +104,14 @@
 
 
   /* Question Tags */
-  .question-row .question-wrapper .question-info-wrapper .question-tags {
+  .ss-result .question-wrapper .question-info-wrapper .question-tags {
     width: 60%;
     float:left;
   }
 
 
   /* Question Info */
-  .question-row .question-wrapper .question-info-wrapper .question-info {
+  .ss-result .question-wrapper .question-info-wrapper .question-info {
     float:right;
     width: 35%;
     padding:4px;
@@ -125,19 +119,19 @@
   }
 
   /* Not sure why this is not picking up the defualt A blue */
-  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window {
+  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window {
     color:#428bca;
   }
 
-  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:hover {
+  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:hover {
     color:#2a6496;
   }
 
-  .question-row .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:visited {
+  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:visited {
     color:#428bca;
   }
 
-  .question-row .question-wrapper .question-info-wrapper .question-info span {
+  .ss-result .question-wrapper .question-info-wrapper .question-info span {
     line-height:11px!important;
     font-size:11px;
     text-align:right;
@@ -146,8 +140,8 @@
     color: #666;
   }
 
-  .question-row a.question,
-  .question-row a.answer {
+  .ss-result a.question,
+  .ss-result a.answer {
     font-weight: 600;
   }
 
@@ -160,49 +154,45 @@
     border-color:#ebebeb;
   }
 
-  /* NAV TABS =============================================== */
-    .tab-wrapper {
-      border-bottom:1px solid #ddd;
+  .tab-wrapper {
+    border-bottom:1px solid #ddd;
+  }
+
+  .ss-sort {
+    border-bottom: none;
+    float: right;
+  }
+
+  @media (max-width: 768px) {
+    .ss-sort {
+      float: left;
     }
+  }
 
-    .question-filters {
-      border-bottom: none;
-      float: right;
-    }
+  /* default */
+  .ss-sort li a {
+    border: 1px solid #ddd;
+    color: #333;
+  }
 
-    @media (max-width: 768px) {
-      .question-filters {
-        float: left;
-      }
-    }
+  /* active */
+  .ss-sort li.ss-sort-active a {
+    color: #79B;
+  }
 
-    .nav-tabs li a {
-      border: 1px solid #ddd;
-      color: #79b;
-    }
+  /* selected */
+  .ss-sort li a.ss-sort-selected {
+    border: 1px solid #ddd;
+    background: #fff;
+    color:#000!important;
+    border-bottom-color: transparent;
+  }
 
-    .nav-tabs li.active a {
-      color: #333;
-    }
-
-    .nav-tabs li a.active {
-      border: 1px solid #ddd;
-      background: #fff;
-      color:#000!important;
-    }
-
-    .nav-tabs li.inactive a {
-      border: 1px solid #ddd;
-      background: #f7f7f9;
-      color: #cacaca;
-    }
-
-    .nav-tabs li.inactive a:hover {
-      border: 1px solid #ddd;
-      background: #f7f7f9;
-      color: #c9c9c9;
-    }
-
-
+  /* inactive */
+  .ss-sort li.ss-sort-inactive a {
+    border: 1px solid #ddd;
+    background: #f7f7f9;
+    color: #cacaca;
+  }
 
 }
