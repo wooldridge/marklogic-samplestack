@@ -6769,16 +6769,7 @@ h1 {
 .ss-dialog footer {
   clear: both; }
 
-/* line 2, /Users/mike/marklogic-samplestack/browser/src/app/styles/dialogs/login */
-.ss-dialog-login label {
-  width: 75px; }
-/* line 6, /Users/mike/marklogic-samplestack/browser/src/app/styles/dialogs/login */
-.ss-dialog-login input {
-  width: 300px !important; }
-/* line 10, /Users/mike/marklogic-samplestack/browser/src/app/styles/dialogs/login */
-.ss-dialog-login form > * {
-  padding: 15px; }
-
+/* styles for login dialog */
 /* line 2, /Users/mike/marklogic-samplestack/browser/src/app/styles/dialogs/all-tags */
 .ss-dialog-all-tags ul {
   list-style: none;
