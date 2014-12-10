@@ -34,7 +34,7 @@
       <ul class="ss-sort nav nav-tabs" role="tablist">
         <li
           ng-repeat="sort in sorts"
-          ng-click="setSort(sort.value)"
+          ng-click="sort.active ? setSort(sort.value) : angular.noop()"
           ng-disabled="!sort.active"
           ng-class="{
             'ss-sort-active': sort.active,
