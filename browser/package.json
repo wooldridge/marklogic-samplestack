@@ -12,7 +12,7 @@
   },
   "main": null,
   "scripts": {
-    "test": "npm test",
+    "test": "gulp unit",
     "postinstall": "node dev-tasks/postinstall.js"
   },
   "devDependencies": {
