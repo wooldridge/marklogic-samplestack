@@ -77,14 +77,14 @@ define([
           };
           scope.$apply();
           angular.element(
-            el[0].querySelector('.ss-user-info-display-name')
+            el[0].querySelector('.ss-account-display-name')
           ).text().should.equal(validUser.displayName);
           angular.element(
-            el[0].querySelector('.ss-user-info-votes-cast')
+            el[0].querySelector('.ss-account-votes-cast')
           ).text().should.contain(validUser.votes.length);
           angular.element(
-            el[0].querySelector('.ss-user-info-reputation')
-          ).text().should.equal(String(validUser.reputation));
+            el[0].querySelector('.ss-account-reputation')
+          ).text().should.contain(String(validUser.reputation));
         }
       );
 
