@@ -19,10 +19,8 @@
     background: #fff;
   }
 
-
-  /* voting stats */
-
-  .ss-result .question-voting-stats .voting-stats-module {
+  /* voting */
+  .ss-votes .ss-votes-module {
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -30,8 +28,8 @@
     width:59px;
   }
 
-  .ss-result .question-voting-stats .voting-stats-module .voting-answers-footer,
-  .ss-result .question-voting-stats .voting-stats-module .voting-stats-header {
+  .ss-votes-footer,
+  .ss-votes-header {
     background: #e7e7e7;
     font-size:8px;
     text-transform: uppercase;
@@ -42,7 +40,7 @@
     overflow: hidden;
   }
 
-  .ss-result .question-voting-stats .voting-stats-module .voting-stats {
+  .ss-votes-stats {
     font-size:16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -53,7 +51,7 @@
     overflow: hidden;
   }
 
-  .ss-result .question-voting-stats .voting-stats-module .voting-answers {
+  .ss-votes-answers {
     font-size:16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -64,28 +62,10 @@
     overflow: hidden;
   }
 
-  .ss-result .question-voting-stats .voting-stats-module .answered {
+  .answered {
     color:#fff;
     background: #1f9072;
   }
-
-  .ss-result .question-wrapper .question-inner {
-    min-height: 50px;
-  }
-
-  .ss-result .question-wrapper .question-inner h2,
-  .ss-result .question-wrapper .question-inner h3,
-  .ss-result .question-wrapper .question-inner h4 {
-    margin-top: 0;
-    margin-bottom: 3px;
-    padding:0;
-    line-height:
-  }
-
-  .ss-result .question-wrapper .question-inner p {
-    font-size:12px;
-  }
-
 
   .started {
     font-size:11px;
@@ -94,44 +74,54 @@
     color: #666;
   }
 
+  /* result question */
+  .ss-question-wrapper .ss-question-inner {
+    min-height: 50px;
+  }
 
-  /* Question Info */
-  .ss-result .question-wrapper .question-info-wrapper {
+  .ss-question-inner h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding:0;
+    line-height:
+  }
+
+  .ss-question-inner p {
+    font-size:12px;
+  }
+
+  /* question metadata */
+  .ss-question-metadata {
     margin-top: 0;
     margin-bottom: 0;
     padding:0;
   }
 
-
-  /* Question Tags */
-  .ss-result .question-wrapper .question-info-wrapper .question-tags {
+  .ss-question-tags {
     width: 60%;
     float:left;
   }
 
-
-  /* Question Info */
-  .ss-result .question-wrapper .question-info-wrapper .question-info {
+  .ss-question-info {
     float:right;
     width: 35%;
     padding:4px;
     margin: 0;
   }
 
-  /* Not sure why this is not picking up the defualt A blue */
-  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window {
+  .ss-question-info .glyphicon-new-window {
     color:#428bca;
   }
 
-  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:hover {
+  .ss-question-info .glyphicon-new-window:hover {
     color:#2a6496;
   }
 
-  .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:visited {
+  .ss-question-info .glyphicon-new-window:visited {
     color:#428bca;
   }
 
-  .ss-result .question-wrapper .question-info-wrapper .question-info span {
+  .ss-question-info span {
     line-height:11px!important;
     font-size:11px;
     text-align:right;
@@ -154,6 +144,7 @@
     border-color:#ebebeb;
   }
 
+  /* sorting */
   .tab-wrapper {
     border-bottom:1px solid #ddd;
   }
@@ -169,18 +160,15 @@
     }
   }
 
-  /* default */
   .ss-sort li a {
     border: 1px solid #ddd;
     color: #333;
   }
 
-  /* active */
   .ss-sort li.ss-sort-active a {
     color: #79B;
   }
 
-  /* selected */
   .ss-sort li a.ss-sort-selected {
     border: 1px solid #ddd;
     background: #fff;
@@ -188,7 +176,6 @@
     border-bottom-color: transparent;
   }
 
-  /* inactive */
   .ss-sort li.ss-sort-inactive a {
     border: 1px solid #ddd;
     background: #f7f7f9;

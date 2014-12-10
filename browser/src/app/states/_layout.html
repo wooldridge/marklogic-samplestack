@@ -1,8 +1,5 @@
 <header class="ss-page-header navbar-fixed-top">
 
-  <div ng-if="loading" class="spinner"></div>
-  <div ng-if="globalError.length" marked="globalError" class="has-error"></div>
-
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -50,6 +47,10 @@
       </div>
     </div>
   </nav>
+
+  <div ng-if="loading" class="spinner"></div>
+  <div ng-if="globalError.length" marked="globalError" class="has-error"></div>
+
 </header>
 
 

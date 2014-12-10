@@ -7212,15 +7212,10 @@ span.label-default {
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
 .ss-results {
   /* result row */
-  /* voting stats */
-  /* Question Info */
-  /* Question Tags */
-  /* Question Info */
-  /* Not sure why this is not picking up the defualt A blue */
-  /* default */
-  /* active */
-  /* selected */
-  /* inactive */ }
+  /* voting */
+  /* result question */
+  /* question metadata */
+  /* sorting */ }
   /* line 4, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-result {
     padding-top: 10px;
@@ -7235,15 +7230,15 @@ span.label-default {
   /* line 18, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-result:nth-of-type(odd) {
     background: #fff; }
-  /* line 25, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-voting-stats .voting-stats-module {
+  /* line 23, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-votes .ss-votes-module {
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     width: 59px; }
-  /* line 34, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-voting-stats .voting-stats-module .voting-answers-footer, .ss-results .ss-result .question-voting-stats .voting-stats-module .voting-stats-header {
+  /* line 32, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-votes-footer, .ss-results .ss-votes-header {
     background: #e7e7e7;
     font-size: 8px;
     text-transform: uppercase;
@@ -7252,8 +7247,8 @@ span.label-default {
     color: #333333;
     letter-spacing: 1px;
     overflow: hidden; }
-  /* line 45, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-voting-stats .voting-stats-module .voting-stats {
+  /* line 43, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-votes-stats {
     font-size: 16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -7262,8 +7257,8 @@ span.label-default {
     text-align: center;
     border-bottom: 1px solid #ddd;
     overflow: hidden; }
-  /* line 56, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-voting-stats .voting-stats-module .voting-answers {
+  /* line 54, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-votes-answers {
     font-size: 16px;
     font-weight: 500;
     padding: 0px 0 2px 0;
@@ -7272,95 +7267,95 @@ span.label-default {
     text-align: center;
     border-bottom: 1px solid #ddd;
     overflow: hidden; }
-  /* line 67, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-voting-stats .voting-stats-module .answered {
+  /* line 65, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .answered {
     color: #fff;
     background: #1f9072; }
-  /* line 72, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-inner {
-    min-height: 50px; }
-  /* line 78, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-inner h2, .ss-results .ss-result .question-wrapper .question-inner h3, .ss-results .ss-result .question-wrapper .question-inner h4 {
-    margin-top: 0;
-    margin-bottom: 3px;
-    padding: 0; }
-  /* line 85, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-inner p {
-    font-size: 12px; }
-  /* line 90, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 70, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .started {
     font-size: 11px;
     text-align: right;
     float: right;
     color: #666; }
-  /* line 99, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper {
+  /* line 78, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-wrapper .ss-question-inner {
+    min-height: 50px; }
+  /* line 82, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-inner h4 {
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding: 0; }
+  /* line 89, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-inner p {
+    font-size: 12px; }
+  /* line 94, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-metadata {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0; }
-  /* line 107, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-tags {
+  /* line 100, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-tags {
     width: 60%;
     float: left; }
-  /* line 114, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-info {
+  /* line 105, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-info {
     float: right;
     width: 35%;
     padding: 4px;
     margin: 0; }
-  /* line 122, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window {
+  /* line 112, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-info .glyphicon-new-window {
     color: #428bca; }
-  /* line 126, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:hover {
+  /* line 116, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-info .glyphicon-new-window:hover {
     color: #2a6496; }
-  /* line 130, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-info .glyphicon-new-window:visited {
+  /* line 120, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-info .glyphicon-new-window:visited {
     color: #428bca; }
-  /* line 134, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
-  .ss-results .ss-result .question-wrapper .question-info-wrapper .question-info span {
+  /* line 124, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  .ss-results .ss-question-info span {
     line-height: 11px !important;
     font-size: 11px;
     text-align: right;
     padding: 0;
     margin: 0;
     color: #666; }
-  /* line 144, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 134, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-result a.question, .ss-results .ss-result a.answer {
     font-weight: 600; }
-  /* line 148, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 138, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .answer-module-divider {
     margin-left: 20px;
     margin-right: 20px; }
-  /* line 153, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 143, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .answer-module-divider hr {
     border-color: #ebebeb; }
-  /* line 157, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 148, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .tab-wrapper {
     border-bottom: 1px solid #ddd; }
-  /* line 161, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 152, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-sort {
     border-bottom: none;
     float: right; }
   @media (max-width: 768px) {
-    /* line 167, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+    /* line 158, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
     .ss-results .ss-sort {
       float: left; }
  }
-  /* line 173, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 163, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-sort li a {
     border: 1px solid #ddd;
     color: #333; }
-  /* line 179, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 168, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-sort li.ss-sort-active a {
     color: #79B; }
-  /* line 184, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 172, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-sort li a.ss-sort-selected {
     border: 1px solid #ddd;
     background: #fff;
     color: #000 !important;
     border-bottom-color: transparent; }
-  /* line 192, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
+  /* line 179, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-search-results */
   .ss-results .ss-sort li.ss-sort-inactive a {
     border: 1px solid #ddd;
     background: #f7f7f9;

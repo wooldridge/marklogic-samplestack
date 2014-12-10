@@ -1,22 +1,23 @@
-<div class="col-md-1 col-sm-2 col-xs-3 question-voting-stats">
-  <div class="voting-stats-module">
-    <div class="voting-stats-header">Votes</div>
-    <div class="voting-stats">
+<div class="ss-votes col-md-1 col-sm-2 col-xs-3">
+  <div class="ss-votes-module">
+    <div class="ss-votes-header">Votes</div>
+    <div class="ss-votes-stats">
       <span
         ng-bind-template="{{::item.content.voteCount ? item.content.voteCount : '0' }}"
       ></span>
     </div>
-    <div class="voting-answers answered ">
+    <div class="ss-votes-answers answered">
       <span
         ng-bind-template="{{::item.content.answerCount}}"
       >
       </span>
     </div>
-    <div class="voting-answers-footer">Answers</div>
-  </div> <!-- voting-stats-module -->
-</div> <!-- col-md-1 col-sm-2 col-xs-3 question-voting-stats -->
-<div class="col-md-11 col-sm-10 col-xs-9 question-wrapper">
-  <div class="question-inner">
+    <div class="ss-votes-footer">Answers</div>
+  </div> <!-- ss-votes-module -->
+</div> <!-- ss-votes -->
+
+<div class="ss-question-wrapper col-md-11 col-sm-10 col-xs-9">
+  <div class="ss-question-inner">
     <h4>
       <a
         ui-sref="root.layout.qnaDoc({ id: item.content.id, q: search.criteria.q })"
@@ -40,12 +41,12 @@
         </span>
       </span>
     </p>
-  </div> <!-- question-inner -->
+  </div> <!-- ss-question-inner -->
 
 <ss-qna-doc-metadata doc="item.content" doc-type="question"></ss-qna-doc-metadata>
 
 
-</div> <!-- col-md-11 col-sm-10 col-xs-9 question-wrapper -->
+</div> <!-- ss-question-wrapper -->
 
 <!--
 <div class="ss-votes">
