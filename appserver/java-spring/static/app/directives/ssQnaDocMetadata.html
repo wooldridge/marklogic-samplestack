@@ -1,11 +1,11 @@
-<div class="ss-question-metadata clearfix" ng-if="docType != 'comment'">
+<div class="ss-question-metadata clearfix">
 
   <!-- date/user/reputation -->
   <div class="ss-question-info">
     <span class="started">
-      <span ng-if="docType == 'question'">Asked</span>
-      <span ng-if="docType == 'answer'">Answered</span
-      >{{ formatDate(doc.creationDate) }}&nbsp;&nbsp;<a
+      <span ng-if="docType == 'question'">Asked</span
+      ><span ng-if="docType == 'answer'">Answered</span
+      > {{ formatDate(doc.creationDate) }}&nbsp;&nbsp;<a
         ng-if="doc.owner.originalId === undefined"
         href=""
         ng-click="showContributor()"
@@ -25,7 +25,7 @@
   </div>
 
   <!-- question tags -->
-  <div class="ss-question-tags">
+  <div class="ss-question-tags" ng-if="docType != 'comment'">
       <a href="" ng-click="goTag(tag)" ng-repeat="tag in doc.tags">
         <span class="label label-default">{{tag}}</span>
       </a>

@@ -1,8 +1,242 @@
-// .ss-question,
-// .ss-answer {
-// }
+/* voting */
+.ss-question-vote-wrapper {
 
+  padding-top:8px;
+
+}
+
+.ss-vote-module {
+
+  .vote-control {
+    text-align:center;
+    margin:0;
+    padding:0;
+  }
+
+  .votes-total {
+    font-size:20px;
+    line-height: 20px;
+    text-align:center;
+    margin:0;
+    padding: 0 0 5px 0;
+    font-weight: 600;
+  }
+
+  .vote-control .vote-up-off,
+  .vote-control .vote-down-off,
+  .vote-control .voted-up,
+  .vote-control .voted-down,
+  .vote-control .vote-up,
+  .vote-control .vote-down {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    font-size: 10px;
+  }
+
+  .vote-up-off {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16.5px 16px 16.5px;
+    border-color: transparent transparent #CCC transparent;
+    cursor: auto;
+  }
+
+  .vote-down-off {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16.5px 0 16.5px;
+    border-color: #CCC transparent transparent transparent;
+    cursor: auto;
+  }
+
+  .voted-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16.5px 16px 16.5px;
+    border-color: transparent transparent #3abc9a transparent;
+    cursor: auto;
+  }
+
+  .voted-down {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16.5px 0 16.5px;
+    border-color: #3abc9a transparent transparent transparent;
+    cursor: auto;
+  }
+
+  .vote-up {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 16.5px 16px 16.5px;
+    border-color: transparent transparent #428bca transparent;
+    cursor: pointer;
+  }
+
+  .vote-down {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 16.5px 0 16.5px;
+    border-color: #428bca transparent transparent transparent;
+    cursor: pointer;
+  }
+
+  .vote-up:hover {
+    border-color: transparent transparent #3071a9 transparent;
+  }
+
+  .vote-down:hover {
+    border-color: #3071a9 transparent transparent transparent;
+  }
+
+}
+
+/* question */
 .ss-qnadoc {
+
+  margin-top: 20px;
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .ss-question-module-wrapper,
+  .ss-question-module-inner {
+    padding-bottom: 10px;
+  }
+
+  /* outbound link */
+  .question-stackoverflow {
+    float:right;
+  }
+
+  .question-stackoverflow a span {
+    top:7px;
+  }
+
+}
+
+.qa-section-header {
+  font-weight:bold;
+  float:left;
+  font-size:15px;
+  padding-top:8px;
+}
+
+.answers-header,
+.your-answer-header {
+  border-bottom:1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.ss-question-module-wrapper {
+
+  .question-module-user-info {
+    padding-top: 6px;
+  }
+
+}
+
+  /* COMMENTING */
+
+.ss-question-module-comment {
+
+  border-top: 1px dotted #ddd;
+  padding-top: 7px;
+  padding-left: 14px;
+  padding-right: 0;
+
+  p {
+    padding-bottom: 3px;
+  }
+
+  textarea {
+    margin-bottom:14px;
+  }
+
+  p, textarea, textarea.form-control {
+    font-size: 12px!important;
+    margin-bottom: 10px;
+  }
+
+}
+
+/* answers */
+.answer-module-wrapper {
+
+  padding-top: 14px;
+
+  .answer-module-vote {
+    padding-top:6px;
+  }
+
+  .answer-module-inner {
+    padding-top:22px;
+    border-bottom:1px solid #ddd;
+  }
+
+  .answer-module-comment,
+  .answer-module-inner,
+  .answer-module-user-info {
+    padding-bottom: 14px;
+  }
+
+  .answer-module-comment {
+    border-top:1px dotted #ddd;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 0;
+  }
+
+  hr {
+    margin: 0;
+  }
+
+}
+
+.ss-comment {
+  border-bottom: dotted 1px #ddd;
+  font-size: smaller;
+  padding-bottom: 5px;
+  margin-bottom: 7px;
+}
+
+.answer-module-divider {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.answer-module-divider hr {
+  border-color:#ebebeb;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ss-add-comment {
+
+  div:first-child {
+    margin: 8px 0 8px 2px;
+    cursor: pointer;
+  }
+
+  textarea {
+    display: block;
+    width: 600px;
+    height: 60px;
+    margin: 4px 0 8px 2px;
+  }
+
+}
+
+
+/* .ss-qnadoc {
   margin-left: 20px;
   max-width: $view-max-width;
   min-width: $view-min-width;
@@ -194,3 +428,4 @@
   }
 
 }
+ */
