@@ -300,7 +300,7 @@ define(['app/module'], function (module) {
                   column: {
                     animation: false,
                     groupPadding: 0,
-                    pointPadding: 0,
+                    pointPadding: 0.2, // adjust for bar spacing
                     borderWidth: 0
                   }
                 }
