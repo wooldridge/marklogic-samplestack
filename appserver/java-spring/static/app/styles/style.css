@@ -7480,6 +7480,12 @@ ss-qna-doc-metadata .ss-question-info span {
   /* line 54, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls .form-submit {
     padding-bottom: 18px; }
+  /* line 58, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  .ss-markdown-wrapper .ss-edit-selected {
+    /* for adjusting edit markdown container size */ }
+  /* line 62, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  .ss-markdown-wrapper .ss-preview-selected {
+    /* for adjusting preview markdown container size */ }
 
 /* line 6, /Users/mike/marklogic-samplestack/browser/src/app/styles/style.scss */
 .spinner {
