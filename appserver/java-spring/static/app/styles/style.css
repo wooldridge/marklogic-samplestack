@@ -6477,45 +6477,29 @@ h1 {
     outline: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
-  /* line 34, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
-  .ss-ask .ss-ask-wrapper .form-group-textarea {
-    -webkit-border-bottom-right-radius: 6px;
-    -webkit-border-bottom-left-radius: 6px;
-    -moz-border-radius-bottomright: 6px;
-    -moz-border-radius-bottomleft: 6px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px; }
-  /* line 43, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
-  .ss-ask .ss-ask-wrapper .nav-tabs {
-    float: right;
-    border-bottom: none; }
-  /* line 48, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
-  .ss-ask .ss-ask-wrapper .form-group-textarea {
-    border: 1px solid #ccc;
-    padding: 20px; }
-  /* line 65, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
+  /* line 46, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
   .ss-ask .ss-ask-wrapper .tag-field {
     /* border-color: #66afe9; */
     /* outline: 0; */ }
-  /* line 105, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
+  /* line 86, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
   .ss-ask .title-module-input-wrapper {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0;
     margin: 0; }
-  /* line 112, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
+  /* line 93, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
   .ss-ask .title-module-input-clear {
     float: right;
     width: 4%;
     text-align: right;
     padding: 14px 14px 0px 14px;
     color: #ccc; }
-  /* line 120, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
+  /* line 101, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
   .ss-ask .title-module-input {
     float: left;
     width: 96%;
     border: 1px none red; }
-  /* line 126, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
+  /* line 107, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
   .ss-ask .title-module-input input {
     border: none;
     box-shadow: inset 0 0px 0px, 0 0 0px;
@@ -6898,6 +6882,21 @@ h1 {
 
 }
  */
+/* used across different views */
+/* line 7, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/all */
+.form-group-textarea {
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px; }
+
+/* line 16, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/all */
+.form-group-textarea {
+  border: 1px solid #ccc;
+  padding: 20px; }
+
 /* line 6, /Users/mike/marklogic-samplestack/browser/src/app/styles/dialogs/base */
 .ss-dialog header button {
   margin-top: -10px; }
@@ -7441,38 +7440,44 @@ ss-qna-doc-metadata .ss-question-info span {
   margin-top: 53px; }
   /* line 5, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .nav-tabs {
+    float: right;
+    border-bottom: none;
     position: relative;
     top: -40px; }
-  /* line 10, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 12, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  .ss-markdown-wrapper .nav-tabs li {
+    /* ensure above toolbar container */
+    z-index: 1000; }
+  /* line 17, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-toolbar {
     position: relative;
     top: -60px;
     left: -21px; }
-  /* line 16, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 23, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper textarea.markdown-input {
     width: 100%;
     position: relative;
     top: -32px;
     height: 100px; }
-  /* line 24, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 31, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper textarea.markdown-input, .ss-markdown-wrapper .ss-markdown-editor-preview {
     min-height: 200px;
     border: 1px solid #ccc; }
-  /* line 29, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 36, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls button {
     padding: 3px 8px !important; }
-  /* line 33, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 40, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls i {
     font-size: 16px !important; }
-  /* line 37, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 44, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls .btn-group-wrapper {
     padding-bottom: 20px; }
-  /* line 41, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 48, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls .form-group {
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px; }
-  /* line 47, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
+  /* line 54, /Users/mike/marklogic-samplestack/browser/src/app/styles/directives/ss-markdown-editor */
   .ss-markdown-wrapper .markdown-controls .form-submit {
     padding-bottom: 18px; }
 

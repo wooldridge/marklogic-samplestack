@@ -14,6 +14,7 @@
 
   <div class="row">
 
+    <!--- voting -->
     <div class="ss-question-vote-wrapper col-md-1 col-sm-2 col-xs-3">
 
       <div class="ss-vote-module">
@@ -120,130 +121,131 @@
 
               </div> <!-- ss-add-comment -->
 
-          </div>
+          </div> <!-- ss-question-module-comment -->
         </div>
       </div>
 
     </div>
   </div> <!-- row -->
 
-  <!--- ANSWER COUNT -->
+  <!--- answer count -->
   <div class="row">
     <div class="col-xs-12 answers-header">
       <div class="qa-section-header">{{answersCountLabel()}}</div>
     </div>
   </div>
 
-  <!--- ANSWER 1 WRAPPER -->
+  <!--- answer -->
   <div class="row answer-module-wrapper" ng-repeat="answer in doc.answers">
 
-  <section class="ss-answer-section" ng-if="answer.owner" id="ss-content-id-{{answer.id}}">
+    <section class="ss-answer-section" ng-if="answer.owner" id="ss-content-id-{{answer.id}}">
 
-    <div class="col-md-1 col-sm-2 col-xs-3 answer-module-vote">
-      <div class="ss-vote-module">
-        <div
-          class="vote-control"
-          ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
-          ng-click="vote(1, answer)"
-        >
-          <span class="vote-up"></span>
-        </div>
-        <div
-          class="vote-control"
-          ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
-        >
-          <span class="vote-up-off"></span>
-        </div>
-        <div class="votes-total">
-          <span>{{ answer.itemTally }}</span>
-        </div>
-        <div
-          class="vote-control"
-          ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
-          ng-click="vote(-1, answer)"
-        >
-          <span class="vote-down"></span>
-        </div>
-        <div
-          class="vote-control"
-          ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
-          ng-click="vote(-1, answer)"
-        >
-          <span class="vote-down-off"></span>
-        </div>
-        <div class="ss-checked" ng-if="answer.id == doc.acceptedAnswerId">&nbsp;</div>
-        <div class="ss-checked-empty"
-             ng-if="canAcceptAnswer(answer) &&
-                    answer.id != doc.acceptedAnswerId"
-             ng-click="accept(answer)"
-        >&nbsp;</div>
-      </div> <!-- vote-module -->
-    </div><!-- answer-module-vote -->
+    <!--- voting -->
+      <div class="col-md-1 col-sm-2 col-xs-3 answer-module-vote">
+        <div class="ss-vote-module">
+          <div
+            class="vote-control"
+            ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
+            ng-click="vote(1, answer)"
+          >
+            <span class="vote-up"></span>
+          </div>
+          <div
+            class="vote-control"
+            ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
+          >
+            <span class="vote-up-off"></span>
+          </div>
+          <div class="votes-total">
+            <span>{{ answer.itemTally }}</span>
+          </div>
+          <div
+            class="vote-control"
+            ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
+            ng-click="vote(-1, answer)"
+          >
+            <span class="vote-down"></span>
+          </div>
+          <div
+            class="vote-control"
+            ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
+            ng-click="vote(-1, answer)"
+          >
+            <span class="vote-down-off"></span>
+          </div>
+          <div class="ss-checked" ng-if="answer.id == doc.acceptedAnswerId">&nbsp;</div>
+          <div class="ss-checked-empty"
+               ng-if="canAcceptAnswer(answer) &&
+                      answer.id != doc.acceptedAnswerId"
+               ng-click="accept(answer)"
+          >&nbsp;</div>
+        </div> <!-- vote-module -->
+      </div><!-- answer-module-vote -->
 
-    <div class="col-md-11 col-sm-10 col-xs-9 answer-module-content-wrapper">
-      <div class="row">
-        <div class="col-sm-11 answer-module-content">
-          <div ss-markdown="answer.text"></div>
-          <ss-qna-doc-metadata
-            doc="answer"
-            doc-type="answer"
-          ></ss-qna-doc-metadata>
+      <div class="col-md-11 col-sm-10 col-xs-9 answer-module-content-wrapper">
+        <div class="row">
+          <div class="col-sm-11 answer-module-content">
+            <div ss-markdown="answer.text"></div>
+            <ss-qna-doc-metadata
+              doc="answer"
+              doc-type="answer"
+            ></ss-qna-doc-metadata>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-11">
-          <div class="answer-module-comment">
+        <div class="row">
+          <div class="col-xs-11">
+            <div class="answer-module-comment">
 
-              <div ng-repeat="comment in answer.comments">
-                <!-- ng-if to avoid displaying empty comment -->
-                <div class="ss-comment" ng-if="comment.creationDate">
-                  {{comment.text}}
-                  <ss-qna-doc-metadata doc="comment" doc-type="comment"></ss-qna-doc-metadata>
+                <div ng-repeat="comment in answer.comments">
+                  <!-- ng-if to avoid displaying empty comment -->
+                  <div class="ss-comment" ng-if="comment.creationDate">
+                    {{comment.text}}
+                    <ss-qna-doc-metadata doc="comment" doc-type="comment"></ss-qna-doc-metadata>
+                  </div>
                 </div>
-              </div>
-              <!-- answer comment link/form -->
-              <div class="ss-add-comment">
+                <!-- answer comment link/form -->
+                <div class="ss-add-comment">
 
-                <div class="question-module-comment">
-                  <button
-                    class="btn btn-default btn-xs"
-                    ng-show="!showAnswerComment[$index]"
-                    ng-click="showAnswerComment[$index]=true"
-                  >Add a Comment</button>
-
-                  <div ng-show="showAnswerComment[$index]">
-                    <!-- final empty comment used for new comment -->
-                    <textarea
-                      ng-model="answer.comments[answer.comments.length - 1].text"
-                    ></textarea>
+                  <div class="question-module-comment">
                     <button
                       class="btn btn-default btn-xs"
-                      ng-click="saveAnswerComment(
-                        answer.comments[answer.comments.length - 1]
-                      )"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </div> <!-- question-module-comment -->
+                      ng-show="!showAnswerComment[$index]"
+                      ng-click="showAnswerComment[$index]=true"
+                    >Add a Comment</button>
 
-              </div> <!-- ss-add-comment -->
+                    <div ng-show="showAnswerComment[$index]">
+                      <!-- final empty comment used for new comment -->
+                      <textarea
+                        ng-model="answer.comments[answer.comments.length - 1].text"
+                      ></textarea>
+                      <button
+                        class="btn btn-default btn-xs"
+                        ng-click="saveAnswerComment(
+                          answer.comments[answer.comments.length - 1]
+                        )"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div> <!-- question-module-comment -->
+
+                </div> <!-- ss-add-comment -->
+
+            </div>
 
           </div>
-
         </div>
       </div>
-    </div>
 
-    <div class="row" ng-if="$index < (doc.answers.length - 2)">
-      <div class="col-xs-12">
-        <div class="answer-module-divider"><hr></div>
+      <div class="row" ng-if="$index < (doc.answers.length - 2)">
+        <div class="col-xs-12">
+          <div class="answer-module-divider"><hr></div>
+        </div>
       </div>
-    </div>
 
-  </section>
+    </section> <!-- ss-answer-section -->
 
-  </div>
+  </div> <!-- answer-module-wrapper -->
 
 
   <div class="row">
@@ -254,21 +256,28 @@
 
   <div ng-if="!canAnswer()">
     You must log in to submit an answer to this question.
-  </div>
+  </div> <!-- !canAnswer() -->
+
   <!-- final empty answer used for new answer -->
   <div ng-if="canAnswer()">
-    <div
-      ss-markdown-editor
-      content="doc.answers[doc.answers.length - 1].text"
-    ></div>
+    <div class="row clearfix">
+      <div class="col-md-1 col-sm-2 col-xs-3 clearfix">&nbsp;</div>
+        <div class="col-md-10 col-sm-10 col-xs-9 markdown-controls clearfix">
+          <div
+            ss-markdown-editor
+            content="doc.answers[doc.answers.length - 1].text"
+          ></div>
 
-    <div class="form-submit">
-      <button
-        type="button"
-        class="btn btn-primary"
-        ng-click="saveAnswer(doc.answers[doc.answers.length - 1])"
-      >Post your answer</button>
+          <div class="form-submit">
+            <button
+              type="button"
+              class="btn btn-primary"
+              ng-click="saveAnswer(doc.answers[doc.answers.length - 1])"
+            >Post your answer</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> <!-- canAnswer() -->
 
-</div>
+</div> <!-- ss-qnadoc -->

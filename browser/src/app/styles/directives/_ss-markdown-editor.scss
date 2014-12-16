@@ -3,8 +3,15 @@
   margin-top: 53px;
 
   .nav-tabs {
+    float:right;
+    border-bottom:none;
     position: relative;
     top: -40px;
+  }
+
+  .nav-tabs li {
+    /* ensure above toolbar container */
+    z-index: 1000;
   }
 
   .markdown-toolbar {
