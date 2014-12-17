@@ -131,9 +131,13 @@
   </div>
 
   <!--- answer -->
-  <div class="row ss-answer-wrapper" ng-repeat="answer in doc.answers">
+  <div
+    class="row ss-answer-wrapper"
+    ng-repeat="answer in doc.answers"
+    id="ss-content-id-{{answer.id}}"
+  >
 
-    <section ng-if="answer.owner" id="ss-content-id-{{answer.id}}">
+    <section ng-if="answer.owner">
 
       <!--- voting -->
       <div class="col-md-1 col-sm-2 col-xs-3 ss-answer-vote">
@@ -254,7 +258,6 @@
     </section> <!-- ss-answer-section -->
 
   </div> <!-- ss-answer-wrapper -->
-
 
   <div class="row">
     <div class="col-xs-12 ss-your-answer-header">

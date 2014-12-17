@@ -70,6 +70,12 @@ define(['app/module'], function (module) {
               }
             };
 
+            scope.setCurrentPage = function (pageNum) {
+              if (scope.search.setCurrentPage(pageNum)) {
+                scope.$emit('criteriaChange');
+              }
+            };
+
           });
 
           scope.searchMode = function () {

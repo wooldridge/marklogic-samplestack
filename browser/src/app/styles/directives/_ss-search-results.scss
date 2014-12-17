@@ -103,15 +103,6 @@
     font-weight: 600;
   }
 
-  .answer-module-divider {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .answer-module-divider hr {
-    border-color:#ebebeb;
-  }
-
   /* sorting */
   .tab-wrapper {
     border-bottom:1px solid #ddd;
@@ -148,6 +139,19 @@
     border: 1px solid #ddd;
     background: #f7f7f9;
     color: #cacaca;
+  }
+
+  .ss-paging .pagination span.caret {
+    margin-top:5px;
+  }
+
+  .ss-paging .pagination span.caret.right {
+    margin-left:5px;
+  }
+
+  .ss-paging .pagination span.caret.left {
+    margin-right:5px;
+    margin-left:0px;
   }
 
 }
