@@ -16,7 +16,10 @@
         <div class="list-group">
 
           <div class="list-group-header">
-            <button class="btn btn-default btn-xs pull-right" >Clear All</button>
+            <button
+              class="btn btn-default btn-xs pull-right"
+              ng-click="clearConstraints('all')"
+            >Clear All</button>
             <h4>Filter Results</h4>
           </div>
 
@@ -44,7 +47,10 @@
 
           <!-- date filter -->
           <div class="list-group-subheader">
-            <button class="btn btn-default btn-xs pull-right" >Clear Dates</button>
+            <button
+              class="btn btn-default btn-xs pull-right"
+              ng-click="clearConstraints('dates')"
+            >Clear Dates</button>
             <h4>Date</h4>
           </div>
           <div class="list-group-section">
@@ -56,7 +62,10 @@
 
           <!-- tags filter -->
           <div class="list-group-subheader">
-            <button class="btn btn-default btn-xs pull-right" >Clear Tags</button>
+            <button
+              class="btn btn-default btn-xs pull-right"
+              ng-click="clearConstraints('tags')"
+              >Clear Tags</button>
             <h4>Tags</h4>
           </div>
           <ss-facet-tags
