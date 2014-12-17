@@ -96,18 +96,14 @@
 
   @media (max-width: 768px) {
 
-    nav ul.nav li#nav-li-log-in {
+    nav ul.nav li.ss-login {
       background: none!important;
       border:1px none red!important;
       padding: 0;
       margin: 0;
     }
 
-    nav ul.nav li a#nav-log-in {
-      color:#ccc;
-    }
-
-    nav ul.nav li#nav-li-ask-question a {
+    nav ul.nav li.ss-ask-button a {
       background: none!important;
     }
 
@@ -138,9 +134,9 @@
 .ss-page-footer {
   border-top:1px solid #ddd;
   padding:10px 10px 10px 10px;
-}
 
-.ss-page-footer p {
-  font-size: 10px;
-  color: #666;
+  p {
+    font-size: 10px;
+    color: #666;
+  }
 }
