@@ -6505,383 +6505,180 @@ h1 {
     box-shadow: inset 0 0px 0px, 0 0 0px;
     margin: 0 !important; }
 
+/* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-qnadoc {
+  margin-top: 20px; }
+  /* line 4, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-qnadoc h1 {
+    font-size: 36px; }
+
 /* voting */
-/* line 2, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-question-vote-wrapper {
+/* line 10, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-wrapper {
   padding-top: 8px; }
 
-/* line 10, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-control {
+/* line 16, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-control {
   text-align: center;
   margin: 0;
   padding: 0; }
-/* line 16, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .votes-total {
+/* line 22, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-votes-total {
   font-size: 20px;
   line-height: 20px;
   text-align: center;
   margin: 0;
   padding: 0 0 5px 0;
   font-weight: 600; }
-/* line 30, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-control .vote-up-off, .ss-vote-module .vote-control .vote-down-off, .ss-vote-module .vote-control .voted-up, .ss-vote-module .vote-control .voted-down, .ss-vote-module .vote-control .vote-up, .ss-vote-module .vote-control .vote-down {
+/* line 36, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-up-off, .ss-vote-module .ss-vote-down-off, .ss-vote-module .ss-voted-up, .ss-vote-module .ss-voted-down, .ss-vote-module .ss-vote-up, .ss-vote-module .ss-vote-down {
   display: inline-block;
   margin: 0;
   padding: 0;
-  font-size: 10px; }
-/* line 37, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-up-off {
+  font-size: 10px;
   width: 0;
   height: 0;
-  border-style: solid;
+  border-style: solid; }
+/* line 46, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-up-off {
   border-width: 0 16.5px 16px 16.5px;
   border-color: transparent transparent #CCC transparent;
   cursor: auto; }
-/* line 46, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-down-off {
-  width: 0;
-  height: 0;
-  border-style: solid;
+/* line 52, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-down-off {
   border-width: 16px 16.5px 0 16.5px;
   border-color: #CCC transparent transparent transparent;
   cursor: auto; }
-/* line 55, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .voted-up {
-  width: 0;
-  height: 0;
-  border-style: solid;
+/* line 58, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-voted-up {
   border-width: 0 16.5px 16px 16.5px;
   border-color: transparent transparent #3abc9a transparent;
   cursor: auto; }
 /* line 64, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .voted-down {
-  width: 0;
-  height: 0;
-  border-style: solid;
+.ss-vote-module .ss-voted-down {
   border-width: 16px 16.5px 0 16.5px;
   border-color: #3abc9a transparent transparent transparent;
   cursor: auto; }
-/* line 73, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-up {
-  width: 0;
-  height: 0;
-  border-style: solid;
+/* line 70, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-up {
   border-width: 0 16.5px 16px 16.5px;
   border-color: transparent transparent #428bca transparent;
   cursor: pointer; }
-/* line 82, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-down {
-  width: 0;
-  height: 0;
-  border-style: solid;
+/* line 76, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-down {
   border-width: 16px 16.5px 0 16.5px;
   border-color: #428bca transparent transparent transparent;
   cursor: pointer; }
-/* line 91, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-up:hover {
+/* line 82, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-up:hover {
   border-color: transparent transparent #3071a9 transparent; }
-/* line 95, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-vote-module .vote-down:hover {
+/* line 86, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-vote-down:hover {
   border-color: #3071a9 transparent transparent transparent; }
+/* line 90, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-accept {
+  margin-top: 10px; }
+/* line 95, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-vote-module .ss-accept .ss-accepted, .ss-vote-module .ss-accept .ss-unaccepted {
+  font-size: 30px;
+  color: #3abc9a; }
 
 /* question */
-/* line 102, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-qnadoc {
-  margin-top: 20px;
-  /* outbound link */ }
-  /* line 106, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .ss-qnadoc h1 {
-    font-size: 36px; }
-  /* line 111, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .ss-qnadoc .ss-question-module-wrapper, .ss-qnadoc .ss-question-module-inner {
-    padding-bottom: 10px; }
-  /* line 116, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .ss-qnadoc .question-stackoverflow {
-    float: right; }
-  /* line 120, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .ss-qnadoc .question-stackoverflow a span {
+/* line 104, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-question-module-wrapper, .ss-question-module-inner {
+  padding-bottom: 10px; }
+
+/* outbound link */
+/* line 109, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-question-stackoverflow {
+  float: right; }
+  /* line 112, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-question-stackoverflow a span {
     top: 7px; }
 
-/* line 126, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.qa-section-header {
+/* line 117, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-qnadoc-header {
   font-weight: bold;
   float: left;
   font-size: 15px;
   padding-top: 8px; }
 
-/* line 134, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.answers-header, .your-answer-header {
+/* line 125, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-answers-header, .ss-your-answer-header {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px; }
 
-/* line 141, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.ss-question-module-wrapper .question-module-user-info {
-  padding-top: 6px; }
-
-/* COMMENTING */
-/* line 149, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+/* comments */
+/* line 131, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
 .ss-question-module-comment {
   border-top: 1px dotted #ddd;
   padding-top: 7px;
   padding-left: 14px;
   padding-right: 0; }
-  /* line 156, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  /* line 138, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
   .ss-question-module-comment p {
     padding-bottom: 3px; }
-  /* line 160, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  /* line 142, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
   .ss-question-module-comment textarea {
     margin-bottom: 14px; }
-  /* line 164, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  /* line 146, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
   .ss-question-module-comment p, .ss-question-module-comment textarea, .ss-question-module-comment textarea.form-control {
     font-size: 12px !important;
     margin-bottom: 10px; }
 
 /* answers */
-/* line 172, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.answer-module-wrapper {
+/* line 154, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-answer-wrapper {
   padding-top: 14px; }
-  /* line 176, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .answer-module-wrapper .answer-module-vote {
+  /* line 158, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-wrapper .ss-answer-vote {
     padding-top: 6px; }
-  /* line 180, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .answer-module-wrapper .answer-module-inner {
+  /* line 162, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-wrapper .ss-answer-inner {
     padding-top: 22px;
     border-bottom: 1px solid #ddd; }
-  /* line 187, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .answer-module-wrapper .answer-module-comment, .answer-module-wrapper .answer-module-inner, .answer-module-wrapper .answer-module-user-info {
+  /* line 169, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-wrapper .ss-answer-comment, .ss-answer-wrapper .ss-answer-inner, .ss-answer-wrapper .ss-answer-user-info {
     padding-bottom: 14px; }
-  /* line 191, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .answer-module-wrapper .answer-module-comment {
+  /* line 173, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-wrapper .ss-answer-comment {
     border-top: 1px dotted #ddd;
     padding-top: 14px;
     padding-left: 14px;
     padding-right: 0; }
-  /* line 198, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-  .answer-module-wrapper hr {
+  /* line 180, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-wrapper hr {
     margin: 0; }
 
-/* line 204, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+/* line 186, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+.ss-answer-divider {
+  margin-left: 35px;
+  margin-right: 35px; }
+  /* line 190, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+  .ss-answer-divider hr {
+    border-color: #ebebeb;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+
+/* comments */
+/* line 198, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
 .ss-comment {
   border-bottom: dotted 1px #ddd;
   font-size: smaller;
   padding-bottom: 5px;
   margin-bottom: 7px; }
 
-/* line 211, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.answer-module-divider {
-  margin-left: 35px;
-  margin-right: 35px; }
-
-/* line 216, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
-.answer-module-divider hr {
-  border-color: #ebebeb;
-  margin-top: 15px;
-  margin-bottom: 15px; }
-
-/* line 224, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+/* line 207, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
 .ss-add-comment div:first-child {
   margin: 8px 0 8px 2px;
   cursor: pointer; }
-/* line 229, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
+/* line 212, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/qnaDoc */
 .ss-add-comment textarea {
   display: block;
   width: 600px;
   height: 60px;
   margin: 4px 0 8px 2px; }
 
-/* .ss-qnadoc {
-  margin-left: 20px;
-  max-width: $view-max-width;
-  min-width: $view-min-width;
-
-  .ss-checked {
-    background-image: url('/app/images/checkmark.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50px;
-    margin-top: 5px;
-    position: relative;
-    width: 58px;
-  }
-
-  .ss-checked-empty {
-    background-image: url('/app/images/checkmark_empty.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 50px;
-    margin-top: 5px;
-    position: relative;
-    width: 58px;
-    cursor: pointer;
-  }
-
-  .ss-metadata {
-    border-bottom: 1px solid #000;
-  }
-}
-
-.ss-qnadoc
-.ss-vote {
-  background-color: #f0f0f0;
-  border: solid 1px #ccc;
-  float: left;
-  height: 76px;
-  position: relative;
-  text-align: center;
-  width: 60px;
-}
-
-.ss-vote-components {
-  position: absolute;
-}
-
-.ss-vote-count {
-  display: block;
-  font-size: 20px;
-  width: 100%;
-}
-
-.ss-up,
-.ss-down {
-  background-position: center;
-  height: 18px;
-  width: 58px;
-}
-
-.ss-up {
-  margin-top: 4px;
-}
-
-.ss-down {
-  margin-bottom: 4px;
-}
-
-.ss-up-cast {
-  background-image: url('/app/images/up-blue.png');
-}
-
-.ss-up-enabled {
-  background-image: url('/app/images/up-dkgray.png');
-  cursor: pointer;
-}
-
-.ss-up-disabled {
-  background-image: url('/app/images/up-gray.png');
-}
-
-.ss-down-cast {
-  background-image: url('/app/images/down-blue.png');
-}
-
-.ss-down-enabled {
-  background-image: url('/app/images/down-dkgray.png');
-  cursor: pointer;
-}
-
-.ss-down-disabled {
-  background-image: url('/app/images/down-gray.png');
-}
-
-.ss-qnadoc-content {
-  overflow: hidden;
-  padding-left: 20px;
-  position: relative;
-}
-
-.ss-comment {
-  border-bottom: solid 1px #aaa;
-  font-size: smaller;
-  padding: 10px 0;
-}
-
-.ss-question-title {
-  height: 40px;
-
-  .ss-so-link {
-    background-image: url('/app/images/original.png');
-    background-position: center;
-    height: 24px;
-    width: 24px;
-    float: right;
-    margin-top: 12px;
-    position: relative;
-    top: -45px;
-  }
-
-}
-
-.ss-add-comment {
-
-  div:first-child {
-    margin: 8px 0 8px 2px;
-    cursor: pointer;
-  }
-
-  textarea {
-    display: block;
-    width: 600px;
-    height: 60px;
-    margin: 8px 0 8px 2px;
-  }
-
-}
-
-.ss-answer-section {
-  border-top: 1px solid;
-  margin-bottom: 25px;
-  padding-top: 15px;
-
-  :last-child {
-    margin-bottom: 0;
-  }
-}
-
-.ss-answer-form {
-  form > * {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
-
-  input {
-    width: 500px;
-  }
-
-  textarea {
-    height: 200px;
-    width: 700px;
-  }
-}
-
-.ss-answers-header {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-
-  h3 {
-    float: left;
-    position: relative;
-  }
-
-  ul.ss-sort {
-    float: right;
-    margin-top: 20px;
-    position: relative;
-  }
-
-  li {
-    margin-left: 10px;
-
-    .ss-sort-active {
-      font-weight: bold;
-    }
-  }
-
-}
- */
 /* used across different views */
 /* line 7, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/all */
 .form-group-textarea {

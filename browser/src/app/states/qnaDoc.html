@@ -2,61 +2,55 @@
   <ss-search-bar></ss-search-bar>
 </section>
 
-<div ng-if="!doc || doc.$ml.waiting" class="spinner">
-</div>
+<div ng-if="!doc || doc.$ml.waiting" class="spinner"></div>
 
-
-<div
-  ng-if="doc && !doc.$ml.waiting"
-  id="question-and-answer-page"
-  class="ss-qnadoc col-md-12"
->
+<div ng-if="doc && !doc.$ml.waiting" class="ss-qnadoc col-md-12">
 
   <div class="row">
 
     <!--- voting -->
-    <div class="ss-question-vote-wrapper col-md-1 col-sm-2 col-xs-3">
+    <div class="ss-vote-wrapper col-md-1 col-sm-2 col-xs-3">
 
       <div class="ss-vote-module">
         <div
-          class="vote-control"
+          class="ss-vote-control"
           ng-if="canVoteQuestion() && !doc.hasVotedOn"
           ng-click="vote(1, doc)"
         >
-          <span class="vote-up"></span>
+          <span class="ss-vote-up"></span>
         </div>
         <div
-          class="vote-control"
+          class="ss-vote-control"
           ng-if="!canVoteQuestion() || doc.hasVotedOn"
         >
-          <span class="vote-up-off"></span>
+          <span class="ss-vote-up-off"></span>
         </div>
-        <div class="votes-total">
+        <div class="ss-votes-total">
           <span>{{doc.itemTally}}</span>
         </div>
         <div
-          class="vote-control"
+          class="ss-vote-control"
           ng-if="canVoteQuestion() && !doc.hasVotedOn"
           ng-click="vote(-1, doc)"
         >
-          <span class="vote-down"></span>
+          <span class="ss-vote-down"></span>
         </div>
         <div
-          class="vote-control"
+          class="ss-vote-control"
           ng-if="!canVoteQuestion() || doc.hasVotedOn"
         >
-          <span class="vote-down-off"></span>
+          <span class="ss-vote-down-off"></span>
         </div>
       </div> <!-- vote-module -->
 
-    </div> <!-- question-vote-wrapper -->
+    </div> <!-- ss-vote-wrapper -->
 
     <div class="ss-question-module-wrapper col-md-11 col-sm-10 col-xs-9">
 
       <div class="row">
         <div class="ss-question-module-inner col-sm-11">
 
-          <div class="question-stackoverflow">
+          <div class="ss-question-stackoverflow">
             <a
               href="http://stackoverflow.com/questions/{{doc.originalId}}"
               target="_blank"
@@ -131,60 +125,74 @@
 
   <!--- answer count -->
   <div class="row">
-    <div class="col-xs-12 answers-header">
-      <div class="qa-section-header">{{answersCountLabel()}}</div>
+    <div class="col-xs-12 ss-answers-header">
+      <div class="ss-qnadoc-header">{{answersCountLabel()}}</div>
     </div>
   </div>
 
   <!--- answer -->
-  <div class="row answer-module-wrapper" ng-repeat="answer in doc.answers">
+  <div class="row ss-answer-wrapper" ng-repeat="answer in doc.answers">
 
-    <section class="ss-answer-section" ng-if="answer.owner" id="ss-content-id-{{answer.id}}">
+    <section ng-if="answer.owner" id="ss-content-id-{{answer.id}}">
 
-    <!--- voting -->
-      <div class="col-md-1 col-sm-2 col-xs-3 answer-module-vote">
+      <!--- voting -->
+      <div class="col-md-1 col-sm-2 col-xs-3 ss-answer-vote">
         <div class="ss-vote-module">
           <div
-            class="vote-control"
+            class="ss-vote-control"
             ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
             ng-click="vote(1, answer)"
           >
-            <span class="vote-up"></span>
+            <span class="ss-vote-up"></span>
           </div>
           <div
-            class="vote-control"
+            class="ss-vote-control"
             ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
           >
-            <span class="vote-up-off"></span>
+            <span class="ss-vote-up-off"></span>
           </div>
-          <div class="votes-total">
+          <div class="ss-votes-total">
             <span>{{ answer.itemTally }}</span>
           </div>
           <div
-            class="vote-control"
+            class="ss-vote-control"
             ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
             ng-click="vote(-1, answer)"
           >
-            <span class="vote-down"></span>
+            <span class="ss-vote-down"></span>
           </div>
           <div
-            class="vote-control"
+            class="ss-vote-control"
             ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
           >
-            <span class="vote-down-off"></span>
+            <span class="ss-vote-down-off"></span>
           </div>
-          <div class="ss-checked" ng-if="answer.id == doc.acceptedAnswerId">&nbsp;</div>
-          <div class="ss-checked-empty"
-               ng-if="canAcceptAnswer(answer) &&
-                      answer.id != doc.acceptedAnswerId"
-               ng-click="accept(answer)"
-          >&nbsp;</div>
-        </div> <!-- vote-module -->
-      </div><!-- answer-module-vote -->
 
-      <div class="col-md-11 col-sm-10 col-xs-9 answer-module-content-wrapper">
+          <!-- accept answer -->
+          <div class="ss-accept text-center" >
+            <div
+              class="ss-accepted"
+              ng-if="canAcceptAnswer(answer) &&
+                     answer.id != doc.acceptedAnswerId"
+              ng-click="accept(answer)"
+
+            >
+              <span class="glyphicon glyphicon-ok-circle"></span>
+            </div>
+            <div
+              class="ss-unaccepted"
+              ng-if="answer.id == doc.acceptedAnswerId"
+            >
+              <span class="glyphicon glyphicon-ok-sign"></span>
+            </div>
+          </div>
+
+        </div> <!-- vote-module -->
+      </div><!-- ss-answer-vote -->
+
+      <div class="col-md-11 col-sm-10 col-xs-9 ss-answer-content-wrapper">
         <div class="row">
-          <div class="col-sm-11 answer-module-content">
+          <div class="col-sm-11 ss-answer-content">
             <div ss-markdown="answer.text"></div>
             <ss-qna-doc-metadata
               doc="answer"
@@ -194,7 +202,7 @@
         </div>
         <div class="row">
           <div class="col-xs-11">
-            <div class="answer-module-comment">
+            <div class="ss-answer-comment">
 
                 <div ng-repeat="comment in answer.comments">
                   <!-- ng-if to avoid displaying empty comment -->
@@ -239,18 +247,18 @@
 
       <div class="row" ng-if="$index < (doc.answers.length - 2)">
         <div class="col-xs-12">
-          <div class="answer-module-divider"><hr></div>
+          <div class="ss-answer-divider"><hr></div>
         </div>
       </div>
 
     </section> <!-- ss-answer-section -->
 
-  </div> <!-- answer-module-wrapper -->
+  </div> <!-- ss-answer-wrapper -->
 
 
   <div class="row">
-    <div class="col-xs-12 your-answer-header">
-      <div class="qa-section-header">Your Answer</div>
+    <div class="col-xs-12 ss-your-answer-header">
+      <div class="ss-qnadoc-header">Your Answer</div>
     </div>
   </div>
 
