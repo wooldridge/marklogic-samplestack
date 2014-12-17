@@ -26,7 +26,10 @@
           <!-- top checkboxes -->
           <div class="list-group-item">
             <div class="checkbox">
-              <label ng-disabled="!store.session">
+              <label
+                ng-disabled="!store.session"
+                ng-class="{'ss-disabled': !store.session}"
+              >
                 <input
                   type="checkbox"
                   ng-model="showMineOnly"
@@ -35,12 +38,17 @@
                 /> Show my contributions only</label>
             </div>
             <div class="checkbox">
-              <label ng-disabled="!store.session">
+              <label
+                ng-disabled="!store.session"
+                ng-class="{'ss-disabled': !store.session}"
+              >
+                <!-- resolvedOnly checked when not logged in -->
                 <input
                   type="checkbox"
                   ng-model="resolvedOnly"
                   ng-change="onCriteriaChange()"
                   ng-disabled="!store.session"
+                  ng-checked="resolvedOnly || !store.session"
                 /> Show resolved only</label>
             </div>
           </div>

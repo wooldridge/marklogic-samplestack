@@ -6408,6 +6408,9 @@ h1 {
 /* line 103, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
 .ss-filters #button-more-tags {
   margin-bottom: 10px; }
+/* line 107, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/explore */
+.ss-filters .ss-disabled {
+  color: #BABABA; }
 
 /* line 1, /Users/mike/marklogic-samplestack/browser/src/app/styles/states/ask */
 .ss-ask {

@@ -121,7 +121,8 @@ define(['app/module'], function (module) {
       });
 
       $scope.clearConstraints = function (type) {
-        if (type === 'all') {
+        // can only change showMineOnly and resolvedOnly if logged in
+        if (type === 'all' && $scope.store.session) {
           $scope.showMineOnly = false;
           $scope.resolvedOnly = false;
         }
