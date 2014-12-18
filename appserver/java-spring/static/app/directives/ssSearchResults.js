@@ -43,6 +43,9 @@ define(['app/module'], function (module) {
               }
             ];
 
+            // for pagination
+            scope.pad = 2;
+
             scope.getSelectedSort = function () {
               if (!scope.search.criteria.sort) {
                 if (scope.search.criteria.q &&
