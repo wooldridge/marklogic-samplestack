@@ -64,6 +64,7 @@ define(['app/module'], function (module) {
 
             scope.setSort = function (sort) {
               scope.search.criteria.sort = sort;
+              scope.search.criteria.start = 1; // reset paging to beginning
               scope.$emit('criteriaChange');
             };
 
