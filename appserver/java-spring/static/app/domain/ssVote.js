@@ -65,7 +65,7 @@ define(['app/module'], function (module) {
 
       SsVote.prototype.onResponsePOST = function (data) {
         this.$ml.parent.onResponsePOST(data);
-        this.$ml.parent.setVoted();
+        this.$ml.parent.setVoted(this.upDown);
       };
 
       return mlModelBase.extend('SsVote', SsVote);

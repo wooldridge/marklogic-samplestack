@@ -64,7 +64,7 @@ define(['app/module'], function (module) {
           properties: {
             contributorId: { type: 'string' },
             questionId: { type: 'string' },
-            voteIds: { type: 'object' }
+            voteInfo: { type: 'object' }
           }
         })
       };
@@ -86,13 +86,12 @@ define(['app/module'], function (module) {
         }
       };
 
-      // Endpoint returns entire QnaDoc content, call parent method
       SsHasVotedObject.prototype.onResponseGET = function (data) {
-        var voteIds = {};
+        var voteInfo = {};
         angular.forEach(data, function (value, index) {
-          voteIds[value] = true;
+          voteInfo[index] = value;
         });
-        this.voteIds = voteIds;
+        this.voteInfo = voteInfo;
       };
 
       return mlModelBase.extend('SsHasVotedObject', SsHasVotedObject);

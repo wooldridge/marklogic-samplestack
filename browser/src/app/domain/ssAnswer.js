@@ -48,9 +48,25 @@ define(['app/module'], function (module) {
       // document's hasVoted method.
       Object.defineProperty(SsAnswerObject.prototype, 'hasVotedOn', {
         get: function () {
+          // for answer, check parent's (qnaDoc's) object
           return this.$ml.parent.hasVoted(this.id);
         }
       });
+
+      /**
+       * @ngdoc method
+       * @name SsAnswerObject#prototype.voteValue
+       * @description Returns vote value for this document (1 or -1) or 0
+       * if the user has not voted on the document.
+       * @returns {number} 1, -1, or 0
+       */
+      SsAnswerObject.prototype.voteValue = function (id) {
+        if (this.hasVotedOn) {
+          // for answer, check parent's (qnaDoc's) object
+          return this.$ml.parent.$ml.hasVoted.voteInfo[id];
+        }
+        return 0;
+      };
 
       /**
        * @ngdoc method
@@ -93,9 +109,10 @@ define(['app/module'], function (module) {
        * @ngdoc method
        * @name SsAnswerObject#prototype.setVoted
        * @description Sets answer as having been voted on.
+       * @param {number} val 1 or -1.
        */
-      SsAnswerObject.prototype.setVoted = function () {
-        this.$ml.parent.setVoted(this.id);
+      SsAnswerObject.prototype.setVoted = function (val) {
+        this.$ml.parent.setVoted(val, this.id);
       };
 
       SsAnswerObject.prototype.$mlSpec = {

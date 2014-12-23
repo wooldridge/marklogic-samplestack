@@ -127,8 +127,8 @@ define(['app/module'], function (module) {
        * @returns {boolean} true or false
        */
       SsQnaDocObject.prototype.hasVoted = function (id) {
-        if (this.$ml.hasVoted && this.$ml.hasVoted.voteIds) {
-          return this.$ml.hasVoted.voteIds[id];
+        if (this.$ml.hasVoted && this.$ml.hasVoted.voteInfo) {
+          return this.$ml.hasVoted.voteInfo.hasOwnProperty(id);
         }
         else {
           return false;
@@ -141,6 +141,20 @@ define(['app/module'], function (module) {
           return this.hasVoted(this.id);
         }
       });
+
+      /**
+       * @ngdoc method
+       * @name SsQnaDocObject#prototype.voteValue
+       * @description Returns vote value for this document (1 or -1) or 0
+       * if the user has not voted on the document.
+       * @returns {number} 1, -1, or 0
+       */
+      SsQnaDocObject.prototype.voteValue = function (id) {
+        if (this.hasVotedOn) {
+          return this.$ml.hasVoted.voteInfo[id];
+        }
+        return 0;
+      };
 
       /**
        * @ngdoc method
@@ -166,11 +180,12 @@ define(['app/module'], function (module) {
        * @ngdoc method
        * @name SsQnaDocObject#prototype.setVoted
        * @description Sets Qna Doc as having been voted on.
+       * @param {number} val Number corresponding to vote value (1 or -1).
        * @param {string} id Optional ID to set. If empty, uses this.id.
        */
-      SsQnaDocObject.prototype.setVoted = function (id) {
-        if (this.$ml.hasVoted && this.$ml.hasVoted.voteIds) {
-          this.$ml.hasVoted.voteIds[id ? id : this.id] = true;
+      SsQnaDocObject.prototype.setVoted = function (val, id) {
+        if (this.$ml.hasVoted && this.$ml.hasVoted.voteInfo) {
+          this.$ml.hasVoted.voteInfo[id ? id : this.id] = val;
         }
       };
 

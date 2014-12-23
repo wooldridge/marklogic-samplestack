@@ -12,6 +12,7 @@
     <div class="ss-vote-wrapper col-md-1 col-sm-2 col-xs-3">
 
       <div class="ss-vote-module">
+        <!-- enabled -->
         <div
           class="ss-vote-control"
           ng-if="canVoteQuestion() && !doc.hasVotedOn"
@@ -19,15 +20,22 @@
         >
           <span class="ss-vote-up"></span>
         </div>
+        <!-- disabled or highlighted (if past upvote) -->
         <div
           class="ss-vote-control"
           ng-if="!canVoteQuestion() || doc.hasVotedOn"
         >
-          <span class="ss-vote-up-off"></span>
+          <span
+            ng-class="{
+              'ss-voted-up': doc.voteValue(doc.id) === 1,
+              'ss-vote-up-off': doc.voteValue(doc.id) !== 1,
+            }"
+          ></span>
         </div>
         <div class="ss-votes-total">
           <span>{{doc.itemTally}}</span>
         </div>
+        <!-- enabled -->
         <div
           class="ss-vote-control"
           ng-if="canVoteQuestion() && !doc.hasVotedOn"
@@ -35,11 +43,17 @@
         >
           <span class="ss-vote-down"></span>
         </div>
+        <!-- disabled or highlighted (if past downvote) -->
         <div
           class="ss-vote-control"
           ng-if="!canVoteQuestion() || doc.hasVotedOn"
         >
-          <span class="ss-vote-down-off"></span>
+          <span
+            ng-class="{
+              'ss-voted-down': doc.voteValue(doc.id) === -1,
+              'ss-vote-down-off': doc.voteValue(doc.id) !== -1,
+            }"
+          ></span>
         </div>
       </div> <!-- vote-module -->
 
@@ -142,6 +156,7 @@
       <!--- voting -->
       <div class="col-md-1 col-sm-2 col-xs-3 ss-answer-vote">
         <div class="ss-vote-module">
+          <!-- enabled -->
           <div
             class="ss-vote-control"
             ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
@@ -149,15 +164,22 @@
           >
             <span class="ss-vote-up"></span>
           </div>
+          <!-- disabled or highlighted (if past upvote) -->
           <div
             class="ss-vote-control"
             ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
           >
-            <span class="ss-vote-up-off"></span>
+            <span
+              ng-class="{
+                'ss-voted-up': answer.voteValue(answer.id) === 1,
+                'ss-vote-up-off': answer.voteValue(answer.id) !== 1,
+              }"
+            ></span>
           </div>
           <div class="ss-votes-total">
             <span>{{ answer.itemTally }}</span>
           </div>
+          <!-- enabled -->
           <div
             class="ss-vote-control"
             ng-if="canVoteAnswer(answer) && !answer.hasVotedOn"
@@ -165,11 +187,17 @@
           >
             <span class="ss-vote-down"></span>
           </div>
+          <!-- disabled or highlighted (if past downvote) -->
           <div
             class="ss-vote-control"
             ng-if="!canVoteAnswer(answer) || answer.hasVotedOn"
           >
-            <span class="ss-vote-down-off"></span>
+            <span
+              ng-class="{
+                'ss-voted-down': answer.voteValue(answer.id) === -1,
+                'ss-vote-down-off': answer.voteValue(answer.id) !== -1,
+              }"
+            ></span>
           </div>
 
           <!-- accept answer -->
