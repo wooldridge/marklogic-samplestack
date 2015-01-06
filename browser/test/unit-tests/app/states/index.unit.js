@@ -2,13 +2,13 @@ define([
   './_layout.unit',
   './_root.unit',
   './explore.unit',
-  './fourOhFour.unit',
+  './error.unit',
   './qnaDoc.unit'
 ], function (
   _layout,
   _root,
   explore,
-  fourOhFour,
+  error,
   qnaDoc
 ) {
 
@@ -18,7 +18,7 @@ define([
       _layout();
       _root();
       explore();
-      fourOhFour();
+      error();
       qnaDoc();
     });
 

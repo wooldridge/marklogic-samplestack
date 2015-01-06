@@ -38,10 +38,13 @@ define(
 
     root.children[0].children = [
       {
-        name: 'root.layout.fourOhFour',
-        url: '/404',
-        controller: 'fourOhFourCtlr',
-        templateUrl: '/app/states/fourOhFour.html'
+        // Possible reasons:
+        // 'unauthorized', 'doc-not-found-guest',
+        // 'doc-not-found', 'page-not-found'
+        name: 'root.layout.error',
+        url: '/error?reason',
+        controller: 'errorCtlr',
+        templateUrl: '/app/states/error.html'
       },
       {
         name: 'root.layout.explore',

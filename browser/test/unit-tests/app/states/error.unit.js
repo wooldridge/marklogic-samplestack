@@ -4,7 +4,7 @@ define([
 ], function (helper, mocks) {
 
   return function () {
-    describe('fourOhFour', function () {
+    describe('error', function () {
       // var $injector;
       var $rootScope;
       var $controller;
@@ -55,10 +55,10 @@ define([
         );
       });
 
-      describe('fourOhFourCtlr', function () {
+      describe('errorCtlr', function () {
         var ctlr;
         it('should enable returning to previous page in history', function () {
-          ctlr = $controller('fourOhFourCtlr', { $scope: scope });
+          ctlr = $controller('errorCtlr', { $scope: scope });
           scope.goBack();
           backStub.calledOnce.should.be.true;
         });

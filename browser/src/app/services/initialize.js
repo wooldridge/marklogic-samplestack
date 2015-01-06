@@ -40,6 +40,9 @@ define(['app/module'], function (module) {
       $rootScope.setLoading = function (isLoading) {
         $rootScope.loading = isLoading;
       };
+      $rootScope.isLoggedIn = function () {
+        return $rootScope.session;
+      };
       return {};
     }
   ]);
