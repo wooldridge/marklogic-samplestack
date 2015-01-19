@@ -104,7 +104,7 @@ define(['app/module'], function (module) {
         }
         // check for upvote
         else {
-          return obj.upvotingContributorIds[$scope.store.session.id]
+          return obj.upvotingContributorIds[$scope.store.session.id];
         }
       };
 
@@ -121,7 +121,7 @@ define(['app/module'], function (module) {
         }
         // check for downvote
         else {
-          return obj.downvotingContributorIds[$scope.store.session.id]
+          return obj.downvotingContributorIds[$scope.store.session.id];
         }
       };
 
