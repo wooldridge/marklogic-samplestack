@@ -151,20 +151,33 @@ define(['_marklogic/module', 'moment'], function (module, moment) {
               if (rejection.data && rejection.data.status === 500 &&
                   /RESTAPI-NODOCUMENT/.test(rejection.data.message)
               ) {
-                rejection.status = 401;
+                rejection.status = 404;
+              }
+
+              if (rejection.status === 404) {
+                // not found
+                if (mlStore.session && mlStore.session.id) {
+                  // someone is logged in
+                  $rootScope.errorCondition = 'notFoundWithSession';
+                }
+                else {
+                  $rootScope.errorCondition = 'notFoundNoSession';
+                  // noone is logged in
+                }
               }
 
               if (
-                rejection.status === 401 || rejection.status === 403
+                rejection.status === 401 ||
+                rejection.status === 403
               ) {
                 // permissions
                 // what is state of session?
-                if (mlStore.session && mlStore.session.sessionId) {
+                if (mlStore.session && mlStore.session.id) {
                   // someone is logged in
-                  $rootScope.errorCondition = 'permissionsWithSession';
+                  $rootScope.errorCondition = 'preventedWithSession';
                 }
                 else {
-                  $rootScope.errorCondition = 'permissionsNoSession';
+                  $rootScope.errorCondition = 'preventedNoSession';
                   // noone is logged in
                 }
               }

@@ -97,44 +97,6 @@ define(['app/module'], function (module) {
           initialize, statesHierarchy, mlStore
         ) {
 
-          // make sure non-logged in users don't get a page which isn't
-          // supposed to be navigable for them
-          $rootScope.$on(
-            '$stateChangeStart',
-            function (event, toState, toParams, fromState, fromParams) {
-              if (
-                statesHierarchy.find(toState.name).authRequired &&
-                !(mlStore.session && mlStore.sessionId)
-              ) {
-                $rootScope.errorCondition = 'authRequiredNav';
-              }
-              else {
-                // if we have any error condition, clear it because
-                // the user is trying something that we hope will
-                // succeed (pending server-side rejection)
-                // Doing this assumes that the server-side rejection
-                // and corresponding errorCondition setting will take
-                // place after $stateChangeStart
-                $rootScope.errorCondition = null;
-              }
-            }
-          );
-
-          // this was rescrolling the window. Not clear why we were doing this
-          // but we certainly don't want to do it each and every time.
-          // $rootScope.$on('$locationChangeSuccess',function () {
-          //   $window.scrollTo(0, 0);
-          // });
-          $rootScope.$on('$stateChangeSuccess', function () {
-            $rootScope.clearLocalError();
-          });
-
-          $rootScope.$on('sessionChange', function () {
-            if (!$rootScope.store.session) {
-              $location.url('/');
-            }
-          });
-
           return {
             params: $stateParams,
 
