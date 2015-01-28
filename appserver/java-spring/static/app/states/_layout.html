@@ -73,9 +73,14 @@
 
   <div ng-class="{ loading: loading }">
     <div ng-if="localError" class="has-error">{{localError}}</div>
-    <section class="ss-main">
-      <div ui-view></div>
-    </section>
+    <div ng-if="!errorCondition">
+      <section class="ss-main">
+        <div ui-view></div>
+      </section>
+    </div>
+    <div if="errorCondition">
+      {{errorCondition}}
+    </div>
 
     <footer class="ss-page-footer">
       <p class="text-center">
