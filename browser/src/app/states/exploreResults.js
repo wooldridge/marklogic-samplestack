@@ -5,10 +5,10 @@ define(['app/module'], function (module) {
    * @kind constructor
    * @name exploreResultsCtlr
    * @description
-   * Controller for the ask root.layout.explore.results ui-router
-   * state, which provides a container for the search results directive.
-   * The directive displays search results, sorting, and pagination. This
-   * state is updated when a new search occurs.
+   * Controller for the root.layout.explore.results ui-router state,
+   * which provides a container for the search results directive.
+   * Upon load, the controller creates an ssSearch object and executes
+   * a search.
    *
    * @param {angular.Scope} $scope (injected)
    * @param {object} appRouting (injected)
@@ -41,7 +41,7 @@ define(['app/module'], function (module) {
           null;
       };
 
-      // Create a search that represents the state params
+      // Create a search that represents the state params.
       // See {@link exploreCtlr} for details.
       var params = angular.copy(appRouting.params);
       params.q = dedasherize(params.q);
