@@ -1,5 +1,7 @@
 define(['app/module'], function (module) {
 
+  /* jshint ignore:start */
+
   /**
    * @ngdoc directive
    * @name ssSearchResults
@@ -40,9 +42,11 @@ define(['app/module'], function (module) {
    * | `searchMode`  | {@link function}  | Whether app is in Search Mode (i.e., does a query string exist). |
    * | `filterMode`  | {@link function}  | Whether app is in Filter Mode (i.e., is a filter is set). |
    */
+
+  /* jshint ignore:end */
+
   module.directive('ssSearchResults', [
-    '$parse',
-    function ($parse) {
+    function () {
       return {
         restrict: 'E',
         templateUrl: '/app/directives/ssSearchResults.html',

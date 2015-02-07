@@ -12,8 +12,8 @@ define(['app/module'], function (module) {
    */
 
   module.directive('ssSearchResult', [
-    '$parse', 'mlUtil',
-    function ($parse, mlUtil) {
+    'mlUtil',
+    function (mlUtil) {
       return {
         restrict: 'E',
         templateUrl: '/app/directives/ssSearchResult.html',
