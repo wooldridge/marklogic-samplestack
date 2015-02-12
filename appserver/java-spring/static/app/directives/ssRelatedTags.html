@@ -1,0 +1,17 @@
+<div>
+  <div class="ss-related-title">
+    Related Tags<br />
+    <span class="ss-related-subtitle">Replaces current selection</span>
+  </div>
+  <div
+    class="ss-related-body"
+  >
+
+    <div ng-if="loading" class="spinner"></div>
+
+    <div ng-repeat="tag in relatedTags">
+      <a href="" ng-click="selectRelated(tag);">{{ tag.name }}</a>
+      <span class="text-muted">({{ tag.count }})</span>
+    </div>
+  </div>
+</div>
