@@ -83,7 +83,7 @@ public class TagControllerIT extends TagControllerTestImpl {
     public void testRelatedTags() throws Exception {
         MvcResult result = super.testRelatedTagsNoArgs();
         logger.debug( result.getResponse().getContentAsString());
-        JSONAssert.assertEquals("{values-response:{distinct-value:[{frequency:1,_value:\"ada\"},{frequency:1,_value:\"latex\"},{frequency:1,_value:\"pango\"},{frequency:1,_value:\"test-data-tag\"}] }}"
+        JSONAssert.assertEquals("{values-response:{distinct-value:[{frequency:2,_value:\"ada\"},{frequency:1,_value:\"latex\"},{frequency:1,_value:\"pango\"},{frequency:11,_value:\"test-data-tag\"}] }}"
 				, result.getResponse().getContentAsString(), false);
 
 		result = super.testRelatedTagsStartPageLength();

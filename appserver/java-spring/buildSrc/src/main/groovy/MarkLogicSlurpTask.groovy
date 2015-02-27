@@ -33,6 +33,29 @@ public class MarkLogicSlurpTask extends MarkLogicTask {
         client.put(params)
     }
 
+    private void updateRdfPermissions() {
+        logger.info("Updating permissions on RDF triples");
+        def permissionsUpdate = """\
+declareUpdate();
+var uris = cts.uris();
+while (true) {
+  var nextUri = uris.next();
+  
+    xdmp.log(nextUri);
+  if (nextUri.done) {break;}
+  else {
+    var uri = nextUri["value"].toString();
+    xdmp.log(uri);
+    for (x in uri) { xdmp.log(x) };
+    if (uri.indexOf("triplestore") != -1) {
+    xdmp.documentSetPermissions(uri, xdmp.permission("samplestack-guest", "read"))
+    }
+  }
+}
+"""
+       client.newServerEval().javascript(permissionsUpdate).evalAs(String.class);
+    }
+
     @TaskAction
     void load() {
 		RESTClient client = writerClient()
@@ -72,5 +95,11 @@ include '**/*.nt'}
         if (numWritten % BATCH_SIZE > 0) {
             docMgr.write(writeSet)
         }
+
+        // this is an evaluated JS function that
+        // gets around a gap in semantics REST capabilities.
+        // samplestack-guest cannot see triples by default.
+        updateRdfPermissions();
     }
+
 }
