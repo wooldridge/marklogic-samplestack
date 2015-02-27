@@ -34,11 +34,13 @@ function get(context, params) {
     var resultObject = {};
     var queryStrings = [];
     for (var result of queryResults) {
-        queryStrings.push(result.relatedTag);
         var relatedTag = result.relatedTag;
         var estimate = cts.estimate(cts.jsonPropertyValueQuery("tags", relatedTag));
         xdmp.log("Found related tag " + relatedTag + " with est. " + estimate);
-        if (estimate > 0) resultObject[relatedTag] = estimate;
+        if (estimate > 0) {
+            resultObject[relatedTag] = estimate;
+            queryStrings.push(result.relatedTag);
+        }
     };
     var queryString = "tag:" + queryStrings.join(" OR tag:");
     context.outputTypes = ["application/json"];
