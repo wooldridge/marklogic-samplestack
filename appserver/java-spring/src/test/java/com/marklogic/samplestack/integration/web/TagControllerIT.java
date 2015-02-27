@@ -40,10 +40,10 @@ import com.marklogic.samplestack.testing.TestDataManager;
 @SpringApplicationConfiguration(classes = { Application.class, TestDataManager.class })
 @Category(IntegrationTests.class)
 public class TagControllerIT extends TagControllerTestImpl {
-	
+
 	@Autowired
 	private Clients clients;
-	
+
 	@Test
 	public void testTagsAnonymousOK() throws Exception {
 		super.testTagsAnonymousOK();
@@ -58,7 +58,7 @@ public class TagControllerIT extends TagControllerTestImpl {
 	public void testTagsWithArgument() throws Exception {
 		super.testTagsWithArgument();
 	}
-	
+
 	@Test
 	public void testBadSort() throws Exception {
 		super.testBadSort();
