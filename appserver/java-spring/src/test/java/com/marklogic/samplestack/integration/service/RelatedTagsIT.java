@@ -27,6 +27,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.marklogic.samplestack.dbclient.DatabaseContext;
 import com.marklogic.samplestack.dbclient.RelatedTagsManager;
 import com.marklogic.samplestack.testing.DatabaseExtensionTests;
@@ -50,18 +53,21 @@ public class RelatedTagsIT {
 	@Autowired
 	RelatedTagsManager manager;
 	
+	@Autowired
+	private ObjectMapper mapper;
+	
 	@Test
 	@Ignore
-	public void testRelatedTags() {
+	public void testRelatedTags() throws JsonProcessingException {
 
-		String relatedTagsQueryString = manager.getRelatedTags("tex");
+		ObjectNode relatedTagsResponse = manager.getRelatedTags("tex");
 
-		logger.info("" + relatedTagsQueryString);
+		logger.info(mapper.writeValueAsString(relatedTagsResponse));
 
-		assertEquals("Expected related tags query for 'tex'", "tag:braille OR tag:capitalization OR tag:cleartype OR tag:context OR tag:cutepdf OR tag:directwrite OR tag:freetype OR tag:harfbuzz OR tag:knitr OR tag:latex OR tag:lyx OR tag:mix OR tag:mmix OR tag:metapost OR tag:miktex OR tag:opentype OR tag:pstricks OR tag:pango OR tag:pdftex OR tag:postscript OR tag:sweave OR tag:tex4ht OR tag:termcap OR tag:texinfo OR tag:truetype OR tag:typeface OR tag:typekit OR tag:typesetting OR tag:uniscribe OR tag:web OR tag:xetex",relatedTagsQueryString);
+		assertEquals("Expected related tags query for 'tex'", "tag:braille OR tag:capitalization OR tag:cleartype OR tag:context OR tag:cutepdf OR tag:directwrite OR tag:freetype OR tag:harfbuzz OR tag:knitr OR tag:latex OR tag:lyx OR tag:mix OR tag:mmix OR tag:metapost OR tag:miktex OR tag:opentype OR tag:pstricks OR tag:pango OR tag:pdftex OR tag:postscript OR tag:sweave OR tag:tex4ht OR tag:termcap OR tag:texinfo OR tag:truetype OR tag:typeface OR tag:typekit OR tag:typesetting OR tag:uniscribe OR tag:web OR tag:xetex",relatedTagsResponse);
 		
-		relatedTagsQueryString = manager.getRelatedTags("latex");
+		relatedTagsResponse = manager.getRelatedTags("latex");
 
-		assertEquals("Expected related tags query for 'latex'", "tag:context OR tag:knitr OR tag:metapost OR tag:miktex OR tag:pstricks OR tag:pdftex OR tag:sweave OR tag:tex OR tag:texinfo OR tag:xetex", relatedTagsQueryString);
+		assertEquals("Expected related tags query for 'latex'", "tag:context OR tag:knitr OR tag:metapost OR tag:miktex OR tag:pstricks OR tag:pdftex OR tag:sweave OR tag:tex OR tag:texinfo OR tag:xetex", relatedTagsResponse);
 	}
 }
