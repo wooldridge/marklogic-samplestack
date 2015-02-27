@@ -1,3 +1,4 @@
+{
   "name": "marklogic-samplestack",
   "version": "1.0.0",
   "description": "A sample application demonstrate basic 3-tiered MarkLogic-based development following the MarkLogic Reference Architecture",
