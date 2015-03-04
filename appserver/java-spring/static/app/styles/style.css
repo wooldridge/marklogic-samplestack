@@ -5802,7 +5802,7 @@ ss-qna-doc-metadata .ss-comment-info {
 
 ss-related-tags {
   position: absolute;
-  left: 315px;
+  right: -160px;
   top: -2px;
   width: 162px;
   border: solid 1px #ddd;
@@ -5830,7 +5830,8 @@ ss-related-tags {
     border-right: solid 1px #ddd;
     background-color: #fff;
     overflow-y: scroll;
-    height: 105px;
+    min-height: 65px;
+    max-height: 150px;
     width: 100%; }
   ss-related-tags .ss-related-body div {
     width: 100%;
