@@ -68,6 +68,8 @@ define(['app/module'], function (module) {
           scope.relatedShown = null;
           scope.relatedActive = true;
 
+          var tagsConstraints = scope.criteria.constraints.tags;
+
           // For controlling related-tags popup
           scope.show = {};
 
@@ -81,9 +83,9 @@ define(['app/module'], function (module) {
               }
             });
             scope.selTags = {};
-            if (scope.criteria.values) {
+            if (tagsConstraints.values) {
               // Cycle through tags in search criteria (the selected tags)
-              scope.criteria.values.forEach(function (tagName) {
+              tagsConstraints.values.forEach(function (tagName) {
                 // If tag exists in unsel array, move to sel array as-is
                 if (scope.unselTags[tagName]) {
                   scope.selTags[tagName] = scope.unselTags[tagName];
@@ -106,17 +108,17 @@ define(['app/module'], function (module) {
           */
           scope.selectTag = function (tag) {
             // Do tag values exist in criteria?
-            if (scope.criteria.values) {
+            if (tagsConstraints.values) {
               // Is selected tag not in the array?
-              if (scope.criteria.values.indexOf(tag.name) < 0) {
+              if (tagsConstraints.values.indexOf(tag.name) < 0) {
                 // Add tag o criteria array
-                scope.criteria.values.push(tag.name);
+                tagsConstraints.values.push(tag.name);
                 scope.$emit('criteriaChange');
               }
             }
             // Add tag as first value in criteria
             else {
-              scope.criteria.values = [tag.name];
+              tagsConstraints.values = [tag.name];
               scope.$emit('criteriaChange');
             }
             // On select, don't show related
@@ -138,10 +140,10 @@ define(['app/module'], function (module) {
 
           scope.unselectTag = function (tag) {
             // Do tag values exist in criteria?
-            if (scope.criteria.values) {
+            if (tagsConstraints.values) {
               // Remove tag from criteria array
-              scope.criteria.values.splice(
-                scope.criteria.values.indexOf(tag.name), 1
+              tagsConstraints.values.splice(
+                tagsConstraints.values.indexOf(tag.name), 1
               );
               scope.$emit('criteriaChange');
             }
