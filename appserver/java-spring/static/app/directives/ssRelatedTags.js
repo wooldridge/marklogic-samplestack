@@ -47,15 +47,21 @@ define([
         */
         scope.show = function () {
           var tagsSearch = ssTagsSearch.create({
-            criteria: {
-              tagsQuery: {
-                start: 1,
-                pageLength: 100,
-                relatedTo: scope.tag.name,
-                sort: 'frequency'
+            // Take existing criteria (search box text,
+            // facet selections, etc.) into account
+            criteria: mlUtil.merge(
+              _.clone(scope.criteria),
+              {
+                tagsQuery: {
+                  start: 1,
+                  pageLength: 100,
+                  relatedTo: scope.tag.name,
+                  sort: 'frequency'
+                }
               }
-            }
+            )
           });
+
           tagsSearch.post().$ml.waiting.then(function () {
             scope.relatedTags = tagsSearch.results.items;
             scope.loading = false;
@@ -67,7 +73,7 @@ define([
         * @param {object} selTag Selected tag object.
         */
         scope.selectRelated = function (selTag) {
-          scope.criteria.values = [selTag.name];
+          scope.criteria.constraints.tags.values = [selTag.name];
           scope.$emit('criteriaChange');
         };
 
