@@ -1,54 +1,13 @@
-var Promise = require('bluebird');
-var options = libRequire('../options');
+var queryOptions = libRequire('../../../database/options/questions.json');
 
-module.exports = function (searchSpec) {
-  var qb = require('marklogic').queryBuilder;
+module.exports = function (req) {
 
-  var query = {
-    search: {
-      queries: [
-        _.merge(searchSpec, { directory: '/questions/' })
-      ]
-    },
-    optionsName: 'questions'
-  };
-  var sliceStart = 1;
-  var sliceSize = 10;
-  var order = ['relevance'];
+  var query = req.body;
+  delete query.search.start; // remove start prop, it breaks things
 
-  var q = this.documents.query(query);
-    // .slice(sliceStart, sliceSize)
-    // .orderBy(order);
+  console.log(JSON.stringify(query, null, 2));
 
-  // TODO: suspect this is a promise, not a function, pergaps
-  return q.result;
+  _.merge(query.search, _.clone(queryOptions));
+
+  return this.documents.query(query).result();
 };
-
-/*
-{
-   "optionsName":"questions",
-   "start":11,
-   "limit":20,
-   "search":{
-      "queries":[
-         {
-            "directory-query":{
-               "uri":[
-                  "/questions/"
-               ]
-            },
-            "and-query":{
-               "qtext":[
-                  "tried",
-                  "sort:active"
-               ],
-               "value-constraint-query":{
-                  "constraint-name":"constrName",
-                  "boolean":true
-               }
-            }
-         }
-      ]
-   }
-}
- */

@@ -1,3 +1,4 @@
+var dbClient = libRequire('db-client');
 var roles = [ 'contributors', 'default' ];
 
 module.exports = function (app, mw) {
@@ -5,6 +6,12 @@ module.exports = function (app, mw) {
     mw.auth.associateBestRole.bind(app, roles),
     mw.parseBody.json,
 
-    // db.searchQnaDocs
+    function (req, res, next) {
+      return req.db.searchQnADocs(req)
+      .then(function (result) {
+        return res.status(200).send(result);
+      })
+      .catch(next);
+    }
   ]);
 };
