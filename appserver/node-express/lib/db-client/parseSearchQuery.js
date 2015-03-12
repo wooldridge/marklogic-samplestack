@@ -11,6 +11,7 @@
  * {String} result.lastActivityLT - date range "to" timestamp
  * {String} result.userName - "my contributions only" flag
  * {String} result.resolved - "resolved only" flag
+ * {String} result.timezone - timezone of client (e.g., "America/Los_Angeles")
  *
  * @param {Object} queryBody
  * @return {Object}
@@ -18,6 +19,9 @@
 
  module.exports = function (queryBody) {
     var result = {};
+
+    // start index
+    result.start = queryBody.search.start;
 
     // string from search box
     result.qtext = queryBody.search.qtext[0] ? queryBody.search.qtext[0] : '';
@@ -51,11 +55,11 @@
           var query = queries[i]['range-constraint-query'];
           switch(query['constraint-name']) {
             case 'lastActivity':
-              // date range from
+              // date range "from"
               if (query['range-operator'] === 'GE') {
                 result.lastActivityGE = query.value;
               }
-              // date range to
+              // date range "to"
               else if (query['range-operator'] === 'LT') {
                 result.lastActivityLT = query.value;
               }
@@ -68,6 +72,9 @@
         }
       }
     }
+
+    // client timezone
+    result.timezone = queryBody.search.timezone ? queryBody.search.timezone : '';
 
     return result;
 };

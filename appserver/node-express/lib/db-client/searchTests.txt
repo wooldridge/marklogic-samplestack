@@ -1,0 +1,33 @@
+JSON Payloads for Testing searchQnADocs()
+-----------------------------------------
+
+Default search:
+{"search":{"qtext":["","sort:active"],"start":1,"timezone":"America/Los_Angeles"}}
+
+"jquery" in search box:
+{"search":{"qtext":["jquery","sort:relevance"],"start":1,"timezone":"America/Los_Angeles"}}
+
+"jquery" and newest sort:
+{"search":{"qtext":["jquery","sort:active"],"start":1,"timezone":"America/Los_Angeles"}}
+
+"jquery" and votes sort:
+{"search":{"qtext":["jquery","sort:votes"],"start":1,"timezone":"America/Los_Angeles"}}
+
+"jquery" and date range:
+{"search":{"qtext":["jquery"],"start":1,"query":{"and-query":{"queries":[{"range-constraint-query":{"constraint-name":"lastActivity","value":"2009-11-01T07:00:00.000Z","range-operator":"GE"}},{"range-constraint-query":{"constraint-name":"lastActivity","value":"2011-04-01T07:00:00.000Z","range-operator":"LT"}}]}},"timezone":"America/Los_Angeles"}}
+
+"jquery" and "html" tag:
+{"search":{"qtext":["jquery"],"start":1,"query":{"and-query":{"queries":[{"range-constraint-query":{"constraint-name":"tag","value":"html"}}]}},"timezone":"America/Los_Angeles"}}
+
+Default page 5:
+{"search":{"qtext":[""],"start":41,"timezone":"America/Los_Angeles"}}
+
+"jquery", date range, and timezone America/Los_Angeles:
+{"search":{"qtext":["jquery"],"start":1,"query":{"and-query":{"queries":[{"range-constraint-query":{"constraint-name":"lastActivity","value":"2010-12-31T20:00:00.000Z","range-operator":"GE"}},{"range-constraint-query":{"constraint-name":"lastActivity","value":"2012-02-01T00:00:00.000Z","range-operator":"LT"}}]}},"timezone":"America/Los_Angeles"}}
+
+"jquery", date range, and timezone Australia/Sydney:
+{"search":{"qtext":["jquery"],"start":1,"query":{"and-query":{"queries":[{"range-constraint-query":{"constraint-name":"lastActivity","value":"2010-12-31T20:00:00.000Z","range-operator":"GE"}},{"range-constraint-query":{"constraint-name":"lastActivity","value":"2012-02-01T00:00:00.000Z","range-operator":"LT"}}]}},"timezone":"Australia/Sydney"}}
+
+My contributions:
+
+Resolved:
