@@ -38,16 +38,16 @@
       result.lastActivityLT = '';
       result.tags = [];
       for (i = 0; i < queries.length; ++i) {
-        if (queries['value-constraint-query']) {
+        if (queries[i]['value-constraint-query']) {
           var query = queries[i]['value-constraint-query'];
           switch(query['constraint-name']) {
-            case 'user':
+            case 'userName':
               // my contributions only
-              result.user = query.value;
+              result.user = query.text;
               break;
             case 'resolved':
               // resolved only
-              result.resolved = query.value;
+              result.resolved = query.text;
               break;
           }
         }
