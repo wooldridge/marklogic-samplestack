@@ -94,7 +94,7 @@ var search = function (spec) {
     vb.range('lastActivityDate')
   )
   .where(
-    parsedFrom,
+    //parsedFrom,
     qb.directory('/questions/'), // limit to qna docs
     qb.and.apply(this, facets)
   )
