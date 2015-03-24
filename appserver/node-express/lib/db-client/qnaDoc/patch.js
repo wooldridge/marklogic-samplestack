@@ -128,8 +128,7 @@ module.exports = function (txid, spec) {
    *   {"id":"cf99542d-f024-4478-a6dc-7e723a51b040",
    *    "displayName":"JoeUser"}
    * @param  {String} questionId The question ID.
-   * @param  {Object} spec Answer content with "comments" and "text" properties.
-   * The comments property is an empty array (TODO Why? Remove?). Example:
+   * @param  {Object} spec The answer content from the request. Example:
    *   {"comments":[],
    *    "text":"The answer is foo."}
    * @return {Promise} A promise object. When fulfilled, the response for the
