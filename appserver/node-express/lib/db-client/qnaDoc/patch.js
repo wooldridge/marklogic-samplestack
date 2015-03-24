@@ -26,7 +26,7 @@ module.exports = function (txid, spec) {
    * @param  {String} contentPath For an answer vote, an XPath expression
    * for locating the answer. For a question vote, an empty string.
    * @param  {String} contributorId The contributor ID.
-   * @param  {Number} voteChange Increment (1) or decrement (-1) value.
+   * @param  {Number} voteChange Increment or decrement value.
    * @return {Promise} A promise object.
    */
   var votePatch = function (
@@ -71,7 +71,7 @@ module.exports = function (txid, spec) {
    *   {"id":"cf99542d-f024-4478-a6dc-7e723a51b040",
    *    "displayName":"JoeUser"}
    * @param  {String} questionId The question ID.
-   * @param  {Number} voteChange Increment (1) or decrement (-1) value.
+   * @param  {Number} voteChange Increment or decrement value.
    * @return {Promise} A promise object.
    */
   var patchQuestionVote = function (txid, contributor, questionId, voteChange) {
@@ -91,7 +91,7 @@ module.exports = function (txid, spec) {
   };
 
   /**
-   * Handle a vote for a Samplestack answer. Constructs an xPath expression
+   * Handle a vote for a Samplestack answer. Constructs an XPath expression
    * for locating the correct answer. Calls votePatch to update the vote
    * information in the MarkLogic database.
    *

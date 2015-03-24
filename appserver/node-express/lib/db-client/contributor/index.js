@@ -12,7 +12,7 @@ var funcs = {};
  *
  * @param  {String} txid The transaction ID.
  * @param  {String} id The contributor ID.
- * @param  {Number} repChange Increment (1) or decrement (-1) value.
+ * @param  {Number} repChange Increment or decrement value.
  * @return {Promise} A promise object.
  */
 funcs.patchReputation = function (txid, id, repChange) {
