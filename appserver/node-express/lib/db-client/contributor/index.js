@@ -27,19 +27,6 @@ funcs.patchReputation = function (txid, id, repChange) {
   ).result();
 };
 
-// TODO I don't see patchVoteCount() called anywhere in /lib. Can we delete?
-funcs.patchVoteCount = function (txid, id, voteCountChange) {
-  // add (or subtract) from voteCount property
-  return this.documents.patch({
-    txid: txid,
-    uri: meta.getUri(id),
-    operations: [
-      pb.replace('voteCount', pb.add(voteCountChange))
-    ]
-  }
-  ).result();
-};
-
 funcs.getUniqueContent = function (txid, spec) {
   var self = this;
   // if given id, we can do this more efficinetly by reading via URI
