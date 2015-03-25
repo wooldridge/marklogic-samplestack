@@ -89,7 +89,6 @@ define(['app/module'], function (module) {
             });
 
             $scope.draftAnswer = ssAnswer.create({}, $scope.doc);
-            delete $scope.draftAnswer.comments;
 
           },
           function (error) {
