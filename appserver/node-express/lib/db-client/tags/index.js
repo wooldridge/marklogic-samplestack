@@ -67,6 +67,36 @@ funcs.getTags = function (spec) {
   });
 };
 
+funcs.getRelatedTags = function (spec) {
+  spec.search.qtext.push('tagword:"*' + spec.search.forTag + '*"');
+  var relatedTo = spec.search.relatedTo;
+  var start = spec.search.start;
+  delete spec.search.start;
+  var pageLength = spec.search.pageLength;
+  delete spec.search.pageLength;
+
+  spec.search.options = {
+    values: {
+      range: {
+        type: 'xs:string',
+        'json-property': 'tags'
+      },
+      name: 'tags',
+      'values-option': 'item-order'
+    }
+  };
+  var result = this.documents.query(spec).result();
+
+  return result.then(function (response) {
+    // unhook();
+    return filterResponse(response, spec.search.forTag, start, pageLength);
+  })
+  .catch(function (err) {
+    // unhook();
+    throw err;
+  });
+};
+
 
 module.exports = function (connection) {
   // create an object with the funcs all bound to the given connection
