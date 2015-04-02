@@ -3,6 +3,8 @@ var origStartRequest = mlrest.startRequest;
 var util = require('util');
 
 mlrest.startRequest = function (operation) {
+  console.dir(operation.options);
+  console.dir(operation.requestBody);
   if (
     operation.options.path === '/v1/search?format=json&category=content' &&
     operation.requestBody && operation.requestBody.search &&
@@ -18,8 +20,11 @@ mlrest.startRequest = function (operation) {
   ) {
     operation.options.path = '/v1/resources/relatedTags?rs:tag=' +
       operation.requestBody.search.relatedTo;
+    operation.options.method = 'GET';
     operation.options.headers.accept = 'application/json';
     console.log('relatedTo!!!!');
+    //console.log(JSON.stringify(operation.options, null, ' '));
+
   }
   return origStartRequest(operation);
 };

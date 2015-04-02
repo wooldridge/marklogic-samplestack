@@ -89,7 +89,8 @@ funcs.getRelatedTags = function (spec) {
 
   return result.then(function (response) {
     // unhook();
-    return filterResponse(response, spec.search.forTag, start, pageLength);
+    console.log(JSON.stringify(response, null, ' '));
+    //return filterResponse(response, spec.search.forTag, start, pageLength);
   })
   .catch(function (err) {
     // unhook();
