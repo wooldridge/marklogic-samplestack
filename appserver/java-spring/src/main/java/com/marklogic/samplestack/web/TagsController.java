@@ -137,38 +137,7 @@ public class TagsController {
 		// ObjectNode aggregateNode = valuesNode.putObject("aggregate");
 		// aggregateNode.put("apply", "count");
 
-		ObjectNode searchTags = null;
-		
-		// for related Tags, we need to post-process start and pageLength
-		if (relatedTagNode != null) {
-			searchTags = tagsService.getTags(ClientRole.securityContextRole(),
-					forTagText, combinedQuery, 1, 100);
-			ArrayNode distinctValues = (ArrayNode) searchTags.get(
-					"values-response").get("distinct-value");
-			Iterator<JsonNode> iterator = distinctValues.iterator();
-			int kept = 0, dropUntil = 1;
-			while (iterator.hasNext()) {
-				ObjectNode distinctValue = (ObjectNode) iterator.next();
-				String tagName = distinctValue.get("_value").asText();
-				if (relatedTags.has(tagName)) {
-					if (dropUntil < start) {
-						dropUntil++;
-						iterator.remove();
-					} else if (kept >= pageLength) {
-						iterator.remove();
-					} else {
-						kept++;
-						distinctValue.set("frequency", relatedTags.get(tagName));
-					}
-				} else {
-					iterator.remove();
-				}
-			}
-		} else {
-			searchTags = tagsService.getTags(ClientRole.securityContextRole(),
+		return tagsService.getTags(ClientRole.securityContextRole(),
 					forTagText, combinedQuery, start, pageLength);
-		}
-
-		return searchTags;
 	}
 }

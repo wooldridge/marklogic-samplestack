@@ -57,17 +57,15 @@ public class RelatedTagsIT {
 	private ObjectMapper mapper;
 	
 	@Test
-	@Ignore
 	public void testRelatedTags() throws JsonProcessingException {
 
 		ObjectNode relatedTagsResponse = manager.getRelatedTags("tex");
 
 		logger.info(mapper.writeValueAsString(relatedTagsResponse));
 
-		assertEquals("Expected related tags query for 'tex'", "tag:braille OR tag:capitalization OR tag:cleartype OR tag:context OR tag:cutepdf OR tag:directwrite OR tag:freetype OR tag:harfbuzz OR tag:knitr OR tag:latex OR tag:lyx OR tag:mix OR tag:mmix OR tag:metapost OR tag:miktex OR tag:opentype OR tag:pstricks OR tag:pango OR tag:pdftex OR tag:postscript OR tag:sweave OR tag:tex4ht OR tag:termcap OR tag:texinfo OR tag:truetype OR tag:typeface OR tag:typekit OR tag:typesetting OR tag:uniscribe OR tag:web OR tag:xetex",relatedTagsResponse);
-		
+		assertEquals("Expected related tags query for 'tex'", "tag:braille OR tag:capitalization OR tag:cleartype OR tag:context OR tag:cutepdf OR tag:directwrite OR tag:freetype OR tag:harfbuzz OR tag:knitr OR tag:latex OR tag:lyx OR tag:mix OR tag:mmix OR tag:metapost OR tag:miktex OR tag:opentype OR tag:pstricks OR tag:pango OR tag:pdftex OR tag:postscript OR tag:sweave OR tag:tex4ht OR tag:termcap OR tag:texinfo OR tag:truetype OR tag:typeface OR tag:typekit OR tag:typesetting OR tag:uniscribe OR tag:web OR tag:xetex",relatedTagsResponse.get("qtext").asText());
 		relatedTagsResponse = manager.getRelatedTags("latex");
 
-		assertEquals("Expected related tags query for 'latex'", "tag:context OR tag:knitr OR tag:metapost OR tag:miktex OR tag:pstricks OR tag:pdftex OR tag:sweave OR tag:tex OR tag:texinfo OR tag:xetex", relatedTagsResponse);
+		assertEquals("Expected related tags query for 'latex'", "tag:context OR tag:knitr OR tag:metapost OR tag:miktex OR tag:pstricks OR tag:pdftex OR tag:sweave OR tag:tex OR tag:texinfo OR tag:xetex", relatedTagsResponse.get("qtext").asText());
 	}
 }

@@ -12,7 +12,6 @@ var sem = require("/MarkLogic/semantics.xqy");
 
 function get(context, params) {
     var tag = params.tag;  // required
-    var structuredQuery = params.structuredQuery;  // required
     var queryResults = sem.sparql(
         'prefix dbr: <http://dbpedia.org/resource/>              '+
         'prefix dbc: <http://dbpedia.org/resource/Category:>     '+
@@ -35,12 +34,8 @@ function get(context, params) {
     var queryStrings = [];
     for (var result of queryResults) {
         var relatedTag = result.relatedTag;
-        var estimate = cts.estimate(cts.jsonPropertyValueQuery("tags", relatedTag));
-        xdmp.log("Found related tag " + relatedTag + " with est. " + estimate);
-        if (estimate > 0) {
-            resultObject[relatedTag] = estimate;
-            queryStrings.push(result.relatedTag);
-        }
+        xdmp.log("Found related tag " + relatedTag);
+        queryStrings.push(result.relatedTag);
     };
     var queryString = "tag:" + queryStrings.join(" OR tag:");
     context.outputTypes = ["application/json"];
