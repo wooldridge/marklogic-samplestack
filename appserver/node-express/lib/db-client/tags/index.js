@@ -59,6 +59,7 @@ funcs.getTags = function (spec) {
 
   return result.then(function (response) {
     // unhook();
+    console.log(JSON.stringify(response, null, ' '));
     return filterResponse(response, spec.search.forTag, start, pageLength);
   })
   .catch(function (err) {
@@ -68,8 +69,7 @@ funcs.getTags = function (spec) {
 };
 
 funcs.getRelatedTags = function (spec) {
-  spec.search.qtext.push('tagword:"*' + spec.search.forTag + '*"');
-  var relatedTo = spec.search.relatedTo;
+  var self = this;
   var start = spec.search.start;
   delete spec.search.start;
   var pageLength = spec.search.pageLength;
@@ -82,14 +82,31 @@ funcs.getRelatedTags = function (spec) {
         'json-property': 'tags'
       },
       name: 'tags',
-      'values-option': 'item-order'
+      'values-option': 'frequency-order'
     }
   };
-  var result = this.documents.query(spec).result();
+
+  var result = self.documents.query(spec).result();
 
   return result.then(function (response) {
     // unhook();
+
+    console.log('***** response1: ');
     console.log(JSON.stringify(response, null, ' '));
+
+    spec.search.qtext.push(response.qtext);
+
+    console.log('***** spec for SECOND: ');
+    console.log(JSON.stringify(spec, null, ' '));
+
+    var result2 = self.documents.query(spec).result();
+
+    return result.then(function (response2) {
+      console.log('***** response2: ');
+      console.log(JSON.stringify(response2, null, ' '));
+    })
+
+
     //return filterResponse(response, spec.search.forTag, start, pageLength);
   })
   .catch(function (err) {
