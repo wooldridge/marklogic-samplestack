@@ -94,22 +94,18 @@ funcs.getRelatedTags = function (spec) {
     };
 
     // Add ORed tags to qtext
-    spec.search.qtext.push(response[0].content.qtext);
-
-    // Turn ORed string into tags array for comparison
-    var relTagsArray = response[0].content.qtext
-      .substring(6, response[0].content.qtext.length - 2)
-      .split(' OR tag:');
+    var orString = "tag:" + response[0].content.reltags.join(" OR tag:");
+    spec.search.qtext.push(orString);
 
     // Second call to tags endpoint (via hookStartRequest)
     return self.documents.query(spec)
     .result().then(function (response2) {
 
-      // Only return tags values that we in the first results
+      // Only return tag values that exist in first results set
       var newDistVals = [];
       if (response2['values-response']['distinct-value']) {
         _.each(response2['values-response']['distinct-value'], function (item) {
-          if (_.contains(relTagsArray, item._value)) {
+          if (_.contains(response[0].content.reltags, item._value)) {
             newDistVals.push(item)
           }
         });
