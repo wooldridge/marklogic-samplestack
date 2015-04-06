@@ -46,11 +46,19 @@ define([
         * retrieve tag data.
         */
         scope.show = function () {
+
+          // Remove any tag constraint values, we don't want those
+          // influencing frequencies in realted-tags results
+          var newCriteria = _.clone(scope.criteria);
+          if (newCriteria.constraints && newCriteria.constraints.tags) {
+            newCriteria.constraints.tags.values = null;
+          }
+
           var tagsSearch = ssTagsSearch.create({
-            // Take existing criteria (search box text,
-            // facet selections, etc.) into account
+
+            // Take existing criteria (save for tags) into account
             criteria: mlUtil.merge(
-              _.clone(scope.criteria),
+              newCriteria,
               {
                 tagsQuery: {
                   start: 1,
