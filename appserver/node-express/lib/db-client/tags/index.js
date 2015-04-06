@@ -71,6 +71,8 @@ funcs.getRelatedTags = function (spec) {
   delete spec.search.start;
   var pageLength = spec.search.pageLength;
   delete spec.search.pageLength;
+  var sort = spec.search.sort;
+  delete spec.search.sort;
 
   // First call to resources endpoint, get related tags
   return self.resources.get({
