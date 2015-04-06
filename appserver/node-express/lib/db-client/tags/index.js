@@ -58,12 +58,9 @@ funcs.getTags = function (spec) {
   var result = this.documents.query(spec).result();
 
   return result.then(function (response) {
-    // unhook();
-    console.log(JSON.stringify(response, null, ' '));
     return filterResponse(response, spec.search.forTag, start, pageLength);
   })
   .catch(function (err) {
-    // unhook();
     throw err;
   });
 };
@@ -75,7 +72,7 @@ funcs.getRelatedTags = function (spec) {
   var pageLength = spec.search.pageLength;
   delete spec.search.pageLength;
 
-  // First call to resources endpoint
+  // First call to resources endpoint, get related tags
   return self.resources.get({
     name: 'relatedTags',
     params: {
@@ -95,7 +92,7 @@ funcs.getRelatedTags = function (spec) {
     };
 
     // Add ORed tags to qtext
-    spec.search.qtext.push(response.qtext);
+    spec.search.qtext.push(response[0].content.qtext);
 
     // Second call to tags endpoint (via hookStartRequest)
     return self.documents.query(spec)
