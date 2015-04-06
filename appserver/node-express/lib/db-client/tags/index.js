@@ -75,42 +75,35 @@ funcs.getRelatedTags = function (spec) {
   var pageLength = spec.search.pageLength;
   delete spec.search.pageLength;
 
-  spec.search.options = {
-    values: {
-      range: {
-        type: 'xs:string',
-        'json-property': 'tags'
-      },
-      name: 'tags',
-      'values-option': 'frequency-order'
+  // First call to resources endpoint
+  return self.resources.get({
+    name: 'relatedTags',
+    params: {
+      'tag':spec.search.relatedTo
     }
-  };
+  }).result().then(function (response) {
 
-  var result = self.documents.query(spec).result();
+    spec.search.options = {
+      values: {
+        range: {
+          type: 'xs:string',
+          'json-property': 'tags'
+        },
+        name: 'tags',
+        'values-option': 'frequency-order'
+      }
+    };
 
-  return result.then(function (response) {
-    // unhook();
-
-    console.log('***** response1: ');
-    console.log(JSON.stringify(response, null, ' '));
-
+    // Add ORed tags to qtext
     spec.search.qtext.push(response.qtext);
 
-    console.log('***** spec for SECOND: ');
-    console.log(JSON.stringify(spec, null, ' '));
-
-    var result2 = self.documents.query(spec).result();
-
-    return result.then(function (response2) {
-      console.log('***** response2: ');
-      console.log(JSON.stringify(response2, null, ' '));
+    // Second call to tags endpoint (via hookStartRequest)
+    return self.documents.query(spec)
+    .result().then(function (response2) {
+      return response2;
     })
-
-
-    //return filterResponse(response, spec.search.forTag, start, pageLength);
   })
   .catch(function (err) {
-    // unhook();
     throw err;
   });
 };
