@@ -38,7 +38,7 @@ import com.marklogic.samplestack.testing.TestDataManager;
 
 
 /**
- * Tests the semantic extension for related tags. 
+ * Tests the semantic extension for related tags.
  * This feature is expected to be delivered in a
  * revision of Samplestack after 8.0-1.
  */
@@ -53,17 +53,17 @@ public class RelatedTagsIT {
 
 	@Autowired
 	RelatedTagsManager manager;
-	
+
 	@Autowired
 	private ObjectMapper mapper;
-	
+
 	@Test
 	public void testRelatedTags() throws JsonProcessingException, JSONException {
 
 		ObjectNode relatedTagsResponse = manager.getRelatedTags("tex");
 
 		logger.info(mapper.writeValueAsString(relatedTagsResponse));
-		JSONAssert.assertEquals("{reltags:[\"ada\",\"braille\",\"capitalization\",\"cleartype\",\"context\",\"cutepdf\",\"directwrite\",\"freetype\",\"harfbuzz\",\"knitr\",\"latex\",\"lyx\",\"mix\",\"mmix\",\"metapost\",\"miktex\",\"opentype\",\"pstricks\",\"pango\",\"pdftex\",\"postscript\",\"sweave\",\"tex4ht\",\"termcap\",\"test-data-tag\",\"texinfo\",\"truetype\",\"typeface\",\"typekit\",\"typesetting\",\"uniscribe\",\"web\",\"xetex\"]}", 
+		JSONAssert.assertEquals("{reltags:[\"ada\",\"braille\",\"capitalization\",\"cleartype\",\"context\",\"cutepdf\",\"directwrite\",\"freetype\",\"harfbuzz\",\"knitr\",\"latex\",\"lyx\",\"mix\",\"mmix\",\"metapost\",\"miktex\",\"opentype\",\"pstricks\",\"pango\",\"pdftex\",\"postscript\",\"sweave\",\"tex4ht\",\"termcap\",\"test-data-tag\",\"texinfo\",\"truetype\",\"typeface\",\"typekit\",\"typesetting\",\"uniscribe\",\"web\",\"xetex\"]}",
 				mapper.writeValueAsString(relatedTagsResponse), true);
 		relatedTagsResponse = manager.getRelatedTags("latex");
 		logger.info(mapper.writeValueAsString(relatedTagsResponse));

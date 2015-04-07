@@ -40,10 +40,10 @@ import com.marklogic.samplestack.testing.TestDataManager;
 @SpringApplicationConfiguration(classes = { Application.class, TestDataManager.class })
 @Category(IntegrationTests.class)
 public class TagControllerIT extends TagControllerTestImpl {
-	
+
 	@Autowired
 	private Clients clients;
-	
+
 	@Test
 	public void testTagsAnonymousOK() throws Exception {
 		super.testTagsAnonymousOK();
@@ -58,7 +58,7 @@ public class TagControllerIT extends TagControllerTestImpl {
 	public void testTagsWithArgument() throws Exception {
 		super.testTagsWithArgument();
 	}
-	
+
 	@Test
 	public void testBadSort() throws Exception {
 		super.testBadSort();
@@ -91,7 +91,7 @@ public class TagControllerIT extends TagControllerTestImpl {
     public void testRelatedTags() throws Exception {
         MvcResult result = super.testRelatedTagsNoArgs();
         logger.debug( result.getResponse().getContentAsString());
-        JSONAssert.assertEquals("{values-response:{distinct-value:[{frequency:1,_value:\"graphics\"},{frequency:1,_value:\"latex\"},{frequency:1,_value:\"pango\"},{frequency:1,_value:\"photoshop\"},{frequency:2,_value:\"test-data-tag\"},{frequency:1,_value:\"tex\"}]}}" , result.getResponse().getContentAsString(), false);
+        JSONAssert.assertEquals("{values-response:{distinct-value:[{frequency:1,_value:\"latex\"},{frequency:1,_value:\"pango\"},{frequency:2,_value:\"test-data-tag\"}]}}" , result.getResponse().getContentAsString(), false);
 
 		result = super.testRelatedTagsStartPageLength();
 

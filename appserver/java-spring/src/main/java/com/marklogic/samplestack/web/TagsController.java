@@ -55,7 +55,7 @@ public class TagsController {
 	private final Logger logger = LoggerFactory.getLogger(TagsController.class);
 
 	/**
-	 * 
+	 *
 	 */
 	@RequestMapping(value = "v1/tags", method = RequestMethod.POST)
 	public @ResponseBody ObjectNode tags(

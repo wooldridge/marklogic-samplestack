@@ -133,8 +133,9 @@ public class MarkLogicTagsService extends MarkLogicBaseService implements
 		for (int i = 0; i < distinctValues.size() && kept < pageLength; i++) {
 			ObjectNode value = (ObjectNode) distinctValues.get(i);
 			String thisTag = value.get("_value").asText();
-			if (forTag == null || thisTag.contains(forTag) ||
-					( relatedTagsList.contains(thisTag))) {
+			if (relatedTagsList.contains(thisTag) ||
+				(relatedTagsList.isEmpty() && forTag == null) ||
+				(forTag != null && thisTag.contains(forTag))) {
 				if (start > 1) {
 					start--;
 				} else {
